@@ -1,0 +1,569 @@
+/*
+ * Design tokens — All One Rengøring (blueprint §5)
+ *
+ * Tailwind v4, CSS-first. Only deviations from Tailwind's defaults are
+ * declared here. Deliberately NOT redefined (Tailwind defaults already
+ * match the approved design system):
+ *   - Spacing: default 4px-based scale (section rhythm = py-16/24/32/40).
+ *   - Radius:  rounded (4px) / rounded-lg (8px) / rounded-xl (12px).
+ *   - Breakpoints: default sm/md/lg/xl/2xl.
+ *
+ * Components must use semantic tokens only — never raw palette values.
+ */
+@import 'tailwindcss';
+
+@theme {
+  /* ------------------------------------------------------------------ */
+  /* Color — semantic. Warm near-white + near-black ink per blueprint.  */
+  /* ------------------------------------------------------------------ */
+  --color-surface: #fcfcfa; /* page background */
+  --color-surface-tint: #f5f5f1; /* alternating section tone */
+  --color-ink: #191918; /* primary text — ~16:1 on surface (AAA) */
+  --color-ink-secondary: #56564f; /* secondary text — ≥7:1 on surface */
+  --color-border: #e6e6df; /* hairline separation */
+
+  /*
+   * Brand colors — extracted from the delivered logo (2026-07-09).
+   * Navy: 12.9:1 on surface (AAA). Green: 4.6:1 (AA normal text) —
+   * supporting role only, never small/low-weight text.
+   */
+  --color-accent: #0d3155; /* brand navy — primary actions, brand moments */
+  --color-accent-strong: #0a2743; /* hover/active darkening of accent */
+  --color-accent-secondary: #2f8348; /* brand green — wordmark, selective accents */
+  --color-accent-contrast: #ffffff;
+  --color-accent-soft: #e9eef6; /* navy tint — soft panels, chips */
+  --color-green-soft: #e8f2eb; /* green tint — icon chips, highlights */
+  /* Extended palette — all derived from the logo's two hues:
+     cream = warm neutral (navy's complement, desaturated),
+     mist  = soft blue canvas, sage = deep green tint. */
+  /* Radius scale — four tiers, no arbitrary values anywhere else.
+     control (inputs/small chips) · card · panel · pill */
+  --radius-control: 0.625rem;
+  --radius-card: 1rem;
+  --radius-panel: 2rem;
+
+  --color-cream: #f7f4ee;
+  --color-mist: #eef3f8;
+  --color-sage: #dceadf;
+
+  /* Functional (forms) — not brand colors; AA on surface. */
+  --color-error: #b42318;
+  --color-success: #067647;
+
+  /* ------------------------------------------------------------------ */
+  /* Typography                                                          */
+  /* ------------------------------------------------------------------ */
+  /*
+   * Schibsted Grotesk (variable, Scandinavian provenance) loaded via
+   * next/font in the root layout — self-hosted at build, zero CLS.
+   * The runtime variable is provided on <html>; system stack = fallback.
+   */
+  --font-sans:
+    var(--font-schibsted), ui-sans-serif, system-ui, -apple-system,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /*
+   * Fluid heading scale (blueprint §5): mobile → desktop via clamp().
+   * Body sizes use Tailwind defaults (text-sm/base/lg = 14/16/18).
+   */
+  --text-display: clamp(2.375rem, 1.6rem + 3.3vw, 4.25rem); /* 38 → 68 */
+  --text-display--line-height: 1.05;
+  --text-display--font-weight: 600;
+  --text-display--letter-spacing: -0.02em;
+  --text-h1: clamp(2rem, 1.75rem + 1.1vw, 2.75rem); /* 32 → 44 */
+  --text-h1--line-height: 1.12;
+  --text-h1--font-weight: 600;
+  --text-h1--letter-spacing: -0.015em;
+  --text-h2: clamp(1.625rem, 1.52rem + 0.45vw, 2rem); /* 26 → 32 */
+  --text-h2--line-height: 1.18;
+  --text-h2--font-weight: 600;
+  --text-h2--letter-spacing: -0.01em;
+  --text-h3: clamp(1.25rem, 1.21rem + 0.15vw, 1.375rem); /* 20 → 22 */
+  --text-h3--line-height: 1.35;
+  --text-h3--font-weight: 600;
+  /* Hero slogan — oversized editorial display (concept C). */
+  --text-slogan: clamp(2.75rem, 1.9rem + 6.5vw, 6.75rem); /* 44 → 108 */
+  --text-slogan--line-height: 1.02;
+  --text-slogan--font-weight: 600;
+  --text-slogan--letter-spacing: -0.025em;
+
+  --text-overline: 0.8125rem; /* 13px eyebrow labels */
+  --text-overline--line-height: 1.4;
+  --text-overline--letter-spacing: 0.08em;
+  --text-overline--font-weight: 500;
+
+  /* ------------------------------------------------------------------ */
+  /* Elevation — 3 levels (blueprint §5): borders separate by default;   */
+  /* shadows are reserved for interaction and overlay states.            */
+  /* ------------------------------------------------------------------ */
+  --shadow-raised:
+    0 1px 2px rgb(25 25 24 / 0.04), 0 4px 12px rgb(25 25 24 / 0.06);
+  --shadow-overlay:
+    0 4px 8px rgb(25 25 24 / 0.06), 0 16px 40px rgb(25 25 24 / 0.14);
+
+  /* ------------------------------------------------------------------ */
+  /* Motion — durations use Tailwind defaults (150/200/300). One easing  */
+  /* token for entrance/reveal moments; interactions use default ease.   */
+  /* ------------------------------------------------------------------ */
+  --ease-emphasis: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ------------------------------------------------------------------ */
+  /* Layout — container widths (blueprint §5)                            */
+  /* ------------------------------------------------------------------ */
+  --container-content: 75rem; /* 1200px — max-w-content */
+  --container-prose: 45rem; /* 720px — overrides default max-w-prose (~70ch measure) */
+}
+
+@layer base {
+  html {
+    /* Anchor navigation (hero → #ydelser). Reduced-motion guard below
+       forces this back to auto for users who opt out. */
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.6; /* blueprint body line-height */
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /*
+   * Focus: one visible, designed ring for every interactive element.
+   * Native :focus-visible — no JS focus management library.
+   */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-accent-contrast);
+  }
+
+  /*
+   * Reduced motion: hard global guard. Component-level animation is
+   * additionally gated, but this backstop guarantees the floor
+   * (CONVENTIONS.md §7) even if a component forgets.
+   */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Lock background scroll while the mobile navigation is open. */
+  body:has(.mobile-nav[open]) {
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  /*
+   * Mobile navigation sheet on the native <dialog>. showModal() supplies
+   * focus trap / Esc / top-layer; this covers presentation only.
+   * Entrance fade+rise via @starting-style (progressive — browsers
+   * without it show the sheet instantly, which is acceptable).
+   */
+  .mobile-nav {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+  }
+
+  .mobile-nav[open] {
+    opacity: 1;
+    translate: 0 0;
+    transition:
+      opacity 200ms var(--ease-emphasis),
+      translate 200ms var(--ease-emphasis);
+
+    @starting-style {
+      opacity: 0;
+      translate: 0 -0.5rem;
+    }
+  }
+
+  .mobile-nav::backdrop {
+    background: none; /* full-screen sheet — backdrop never visible */
+  }
+
+  /*
+   * Sticky header elevation, scroll-driven and JS-free (progressive).
+   * Baseline everywhere: the hairline border-b set in the component.
+   */
+  @supports (animation-timeline: scroll()) {
+    .site-header {
+      animation: header-elevate linear both;
+      animation-timeline: scroll();
+      animation-range: 0 6rem;
+    }
+
+    @keyframes header-elevate {
+      to {
+        box-shadow: var(--shadow-raised);
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   Hero animations — intentionally OUTSIDE all cascade layers for maximum
+   robustness (plain author-origin rules beat any layer-ordering quirk).
+   ========================================================================== */
+
+/*
+ * "The Wipe" v2 — dual-layer reveal. The real (screen-reader) text sits
+ * pale underneath; an aria-hidden navy copy on top is revealed left to
+ * right by an animated clip-path. No background-clip:text, no transparent
+ * text — cannot silently fail into black or invisible.
+ */
+.wipe-base {
+  color: rgb(25 25 24 / 0.24);
+}
+
+.wipe-over {
+  position: absolute;
+  inset: 0;
+  color: var(--color-accent);
+  clip-path: inset(-10% 100% -10% 0);
+  animation: wipe-reveal 1200ms cubic-bezier(0.22, 1, 0.36, 1) 400ms forwards;
+}
+
+@keyframes wipe-reveal {
+  to {
+    clip-path: inset(-10% 0% -10% 0);
+  }
+}
+
+.wipe-sweep {
+  position: absolute;
+  top: -0.3em;
+  bottom: -0.3em;
+  left: 0;
+  width: 4px;
+  border-radius: 2px;
+  background-color: var(--color-accent-secondary);
+  opacity: 0;
+  animation: wipe-sweep-move 1200ms cubic-bezier(0.22, 1, 0.36, 1) 400ms forwards;
+}
+
+@keyframes wipe-sweep-move {
+  0% {
+    left: 0%;
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+/* Load entrance — staggered rise-in. Never applied to the H1 (LCP). */
+.enter {
+  opacity: 0;
+  animation: rise-in 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.enter-d1 { animation-delay: 100ms; }
+.enter-d2 { animation-delay: 220ms; }
+.enter-d3 { animation-delay: 340ms; }
+.enter-d4 { animation-delay: 460ms; }
+.enter-d5 { animation-delay: 580ms; }
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wipe-over {
+    animation: none;
+    clip-path: none;
+  }
+  .wipe-sweep {
+    animation: none;
+    opacity: 0;
+  }
+  .enter {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* ==========================================================================
+   Scroll reveals — IntersectionObserver adds .is-visible (see
+   components/features/scroll-reveal.tsx). Hidden initial state only
+   applies when scripting is enabled, so no-JS users always see content.
+   Cross-browser, no library.
+   ========================================================================== */
+@media (scripting: enabled) {
+  [data-reveal] {
+    opacity: 0;
+    translate: 0 22px;
+    transition:
+      opacity 700ms ease,
+      translate 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  [data-reveal].is-visible {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* Gentle float for hero imagery — alternating phases feel organic. */
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+.float-a {
+  animation: float-y 7s ease-in-out infinite;
+}
+.float-b {
+  animation: float-y 8.5s ease-in-out 1.2s infinite;
+}
+
+/* Infinite editorial marquee — track holds two copies of the content. */
+.marquee {
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 3rem;
+  animation: marquee-move 30s linear infinite;
+}
+
+@keyframes marquee-move {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    translate: 0 0;
+    transition: none;
+  }
+  .float-a,
+  .float-b,
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* ==========================================================================
+   Continuous hero life — ambient drift, recurring polish glint, pulsing
+   status dot. All infinite, all subtle, all off under reduced motion.
+   ========================================================================== */
+
+/* Soft brand blobs drifting behind the slogan. */
+.hero-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.hero-blob-a {
+  width: 360px;
+  height: 360px;
+  top: -70px;
+  left: -90px;
+  background-color: var(--color-accent-soft);
+  animation: drift-a 21s ease-in-out infinite;
+}
+
+.hero-blob-b {
+  width: 320px;
+  height: 320px;
+  right: -70px;
+  bottom: 160px;
+  background-color: var(--color-green-soft);
+  animation: drift-b 26s ease-in-out infinite;
+}
+
+@keyframes drift-a {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(55px, 45px) scale(1.12);
+  }
+}
+
+@keyframes drift-b {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-60px, -35px) scale(1.08);
+  }
+}
+
+/*
+ * Recurring "freshly polished" glint: every ~6.5s a soft highlight
+ * sweeps across the navy slogan letters. Text-clipped, so it exists
+ * only on the glyphs; if background-clip:text is unsupported the layer
+ * is simply invisible — safe fail.
+ */
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .wipe-glint {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(
+      105deg,
+      transparent 42%,
+      rgb(255 255 255 / 0.75) 50%,
+      transparent 58%
+    );
+    background-size: 250% 100%;
+    background-position: 130% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: glint-move 6.5s ease-in-out 3.2s infinite;
+  }
+
+  @keyframes glint-move {
+    0% {
+      background-position: 130% 0;
+    }
+    45% {
+      background-position: -30% 0;
+    }
+    100% {
+      background-position: -30% 0;
+    }
+  }
+}
+
+/* Kicker chip status dot — slow breathing pulse. */
+.pulse-dot {
+  animation: pulse-dot 2.6s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob-a,
+  .hero-blob-b,
+  .pulse-dot {
+    animation: none;
+  }
+  .wipe-glint {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+/* ==========================================================================
+   Simulated "before" state — used ONLY until real paired job photography
+   exists (content flag `simulated`). Layers a dulled, hazy, grimy
+   treatment over the clean photo so the transformation is immediately
+   legible. Never presented as a photo of a real customer job.
+   ========================================================================== */
+.grime img {
+  filter: brightness(0.72) contrast(0.82) saturate(0.28) sepia(0.35) blur(0.4px);
+}
+
+/* Streaked haze + dust — pure CSS, no asset. */
+.grime::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    /* dust specks */
+    radial-gradient(circle at 12% 22%, rgb(90 78 60 / 0.35) 0 2px, transparent 3px),
+    radial-gradient(circle at 68% 15%, rgb(90 78 60 / 0.3) 0 2px, transparent 3px),
+    radial-gradient(circle at 34% 74%, rgb(90 78 60 / 0.28) 0 2px, transparent 3px),
+    radial-gradient(circle at 82% 62%, rgb(90 78 60 / 0.32) 0 2px, transparent 3px),
+    radial-gradient(circle at 52% 44%, rgb(90 78 60 / 0.25) 0 2px, transparent 3px),
+    /* smear streaks */
+    repeating-linear-gradient(
+      112deg,
+      rgb(120 105 80 / 0.13) 0 3px,
+      transparent 3px 22px
+    ),
+    /* grimy film + corner shadowing */
+    radial-gradient(
+      ellipse at 50% 45%,
+      transparent 35%,
+      rgb(72 62 45 / 0.42) 100%
+    ),
+    linear-gradient(180deg, rgb(96 84 62 / 0.22), rgb(72 62 45 / 0.3));
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Focus — one visible, high-contrast ring on every interactive element,
+   keyboard-only (WCAG 2.4.7 / 2.4.11). Applied globally rather than
+   per-component so no future element can ship without it.
+   ========================================================================== */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* On navy surfaces the navy ring would vanish — invert it. */
+.bg-accent :focus-visible,
+[class*='bg-accent '] :focus-visible {
+  outline-color: var(--color-surface);
+}
+
+@media (prefers-contrast: more) {
+  :focus-visible {
+    outline-width: 3px;
+  }
+}

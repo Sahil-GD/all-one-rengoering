@@ -1,0 +1,16 @@
+# Editor-level consistency, enforced before Prettier even runs.
+# Covers file types Prettier does not format (.env.example, etc.).
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+[*.md]
+# Trailing spaces are meaningful (hard line breaks) in Markdown.
+trim_trailing_whitespace = false

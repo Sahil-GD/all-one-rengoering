@@ -1,0 +1,577 @@
+{
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "mainNav": "Main navigation",
+    "footerNav": "Footer navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menu": "Menu",
+    "toHomepage": "To the homepage",
+    "language": "Language"
+  },
+  "nav": {
+    "privat": "Private",
+    "erhverv": "Business",
+    "priser": "Prices",
+    "omOs": "About us",
+    "kontakt": "Contact",
+    "cta": "Get a free quote",
+    "call": "Call us",
+    "faq": "FAQ",
+    "areas": "Service area"
+  },
+  "footer": {
+    "servicesHeading": "Services",
+    "companyHeading": "Company",
+    "cvrLabel": "CVR no.",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service",
+    "serviceAreaNote": "We cover all of Zealand"
+  },
+  "metadata": {
+    "titleDefault": "All One Rengøring — Professional cleaning",
+    "description": "All One Rengøring delivers professional cleaning for homes and businesses across Zealand, Denmark. Contact us for a free, no-obligation quote."
+  },
+  "notFound": {
+    "heading": "Page not found",
+    "body": "The page does not exist, or the address has changed.",
+    "backHome": "Go to the homepage"
+  },
+  "quote": {
+    "metaTitle": "Get a free quote",
+    "metaDescription": "Fill in the form and receive a free, no-obligation quote for professional cleaning in Zealand, Denmark.",
+    "eyebrow": "Free quote",
+    "heading": "Tell us about your task",
+    "intro": "Fill in the form and we will get back to you with a free, no-obligation quote.",
+    "point1": "Free and non-binding",
+    "point2": "Fixed, transparent price",
+    "point3": "We cover all of Zealand",
+    "phoneNote": "Prefer to call?",
+    "services": {
+      "fast-rengoering": "Recurring cleaning",
+      "hovedrengoering": "Deep cleaning",
+      "flytterengoering": "Move-out cleaning",
+      "erhvervsrengoering": "Commercial cleaning"
+    },
+    "form": {
+      "segmentLabel": "Who is the quote for?",
+      "segmentPrivat": "Private",
+      "segmentErhverv": "Business",
+      "service": "Service",
+      "company": "Company name",
+      "name": "Your name",
+      "phone": "Phone",
+      "email": "Email",
+      "city": "City",
+      "message": "Describe the task (optional)",
+      "submit": "Send and get your quote",
+      "submitting": "Sending…",
+      "errorSummary": "Please check the highlighted fields and try again.",
+      "errors": {
+        "required": "This field is required",
+        "invalid": "Invalid value"
+      }
+    }
+  },
+  "thanks": {
+    "metaTitle": "Thank you",
+    "heading": "Thanks – we have received your request",
+    "body": "We will review your task and get back to you with a free, no-obligation quote.",
+    "step1": "We review your description and prepare your quote.",
+    "step2": "You will hear from us by phone or email.",
+    "backHome": "Back to the homepage"
+  },
+  "contact": {
+    "metaTitle": "Contact us",
+    "metaDescription": "Contact All One Rengøring – professional cleaning for homes and businesses across Zealand. Call +45 28 76 31 86.",
+    "eyebrow": "Contact",
+    "heading": "We are ready to help",
+    "intro": "Call us, or send a request via the form – and we will get back to you as soon as possible.",
+    "phoneHeading": "Call us",
+    "phoneText": "The fastest way to an answer.",
+    "addressHeading": "Address",
+    "cvrLabel": "CVR no.",
+    "areaNote": "We cover all of Zealand.",
+    "ctaHeading": "Ready for a quote?",
+    "ctaText": "Free, non-binding and with a fixed price.",
+    "ctaButton": "Get a free quote",
+    "image": {
+      "src": "https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Bright office, cleaned and ready for use"
+    },
+    "areaHeading": "Service area"
+  },
+  "privat": {
+    "metaTitle": "Home cleaning in Zealand",
+    "metaDescription": "Recurring cleaning, deep cleaning and move-out cleaning for private homes across Zealand. Free, no-obligation quotes.",
+    "eyebrow": "Private",
+    "heading": "Cleaning for your home",
+    "intro": "From recurring cleaning to a full deep clean – we tailor the job to your home and your routine, always with a fixed, transparent price.",
+    "services": [
+      {
+        "title": "Recurring cleaning",
+        "description": "Regular cleaning weekly or every other week, planned around your daily life.",
+        "image": {
+          "src": "https://images.pexels.com/photos/4239013/pexels-photo-4239013.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "alt": "Freshly cleaned kitchen with wiped worktops and a polished sink"
+        },
+        "href": "/ydelser/fast-rengoering"
+      },
+      {
+        "title": "Deep cleaning",
+        "description": "Thorough ceiling-to-floor cleaning – ideal in spring, after a party or after tradesmen.",
+        "image": {
+          "src": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "alt": "Bathroom after descaling of tiles and fittings"
+        },
+        "href": "/ydelser/hovedrengoering"
+      },
+      {
+        "title": "Move-out cleaning",
+        "description": "Complete end-of-tenancy cleaning, leaving the home ready for handover and inspection.",
+        "image": {
+          "src": "https://images.pexels.com/photos/6197122/pexels-photo-6197122.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "alt": "Empty apartment after move-out cleaning, ready for inspection"
+        },
+        "href": "/ydelser/flytterengoering"
+      }
+    ],
+    "serviceCta": "View service",
+    "noteHeading": "Good to know as a private customer",
+    "noteText": "As a private customer you can use the Danish servicefradrag and deduct part of the labour cost from your taxes. See current rates at skat.dk.",
+    "points": [
+      "Free, no-obligation quotes",
+      "Fixed, transparent price",
+      "We cover all of Zealand"
+    ],
+    "cta": {
+      "heading": "Shall we handle the cleaning at home?",
+      "text": "Tell us about your home – it only takes a few minutes.",
+      "button": "Get a free quote"
+    },
+    "heroImage": {
+      "src": "https://images.pexels.com/photos/6197109/pexels-photo-6197109.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Living room after cleaning: vacuumed floors and wiped surfaces"
+    }
+  },
+  "erhverv": {
+    "metaTitle": "Commercial cleaning in Zealand",
+    "metaDescription": "Professional commercial cleaning for offices and business premises across Zealand. Free, no-obligation quotes.",
+    "eyebrow": "Business",
+    "heading": "Cleaning for your business",
+    "intro": "Clean premises are part of your public face – and of a healthy work environment. We plan the cleaning around your premises and opening hours, during or outside working hours.",
+    "services": [
+      {
+        "title": "Office cleaning",
+        "description": "Ongoing cleaning of offices and shared areas – workstations, floors, kitchen and restrooms.",
+        "image": {
+          "src": "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "alt": "Open-plan office after commercial cleaning"
+        },
+        "href": "/ydelser/erhvervsrengoering"
+      },
+      {
+        "title": "Business premises",
+        "description": "Shops, clinics and other commercial premises – adapted to your industry and requirements.",
+        "image": {
+          "src": "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "alt": "Cleaned lobby in a commercial building"
+        },
+        "href": "/ydelser/erhvervsrengoering"
+      },
+      {
+        "title": "Preparation",
+        "description": "Deep cleaning and preparation of premises at move-in, move-out or after tradesmen.",
+        "image": {
+          "src": "https://images.pexels.com/photos/2451616/pexels-photo-2451616.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "alt": "Meeting room with wiped tables and vacuumed floors"
+        },
+        "href": "/ydelser/hovedrengoering"
+      }
+    ],
+    "serviceCta": "View service",
+    "noteHeading": "A partnership you can count on",
+    "noteText": "You get a fixed agreement with clear terms – and cleaning done properly and on time, every time.",
+    "points": [
+      "Dedicated contact person",
+      "Flexible scheduling",
+      "Free, no-obligation quotes"
+    ],
+    "cta": {
+      "heading": "Shall we prepare your quote?",
+      "text": "Describe your premises and needs – we respond quickly.",
+      "button": "Get a free quote"
+    },
+    "heroImage": {
+      "src": "https://images.pexels.com/photos/3182759/pexels-photo-3182759.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Modern Danish office after cleaning"
+    }
+  },
+  "pricing": {
+    "metaTitle": "Cleaning prices",
+    "metaDescription": "Transparent cleaning prices for homes and businesses in Zealand. Get a fixed price with a free, no-obligation quote.",
+    "eyebrow": "Prices",
+    "heading": "Fixed price – no surprises",
+    "intro": "We give you a fixed, transparent price based on your actual task, instead of a standard rate that never fits reality. The quote is free and non-binding.",
+    "factorsHeading": "What affects the price",
+    "factors": [
+      {
+        "title": "Size",
+        "description": "The area and number of rooms of the home or premises."
+      },
+      {
+        "title": "Frequency",
+        "description": "Recurring cleaning gives a better price than one-off jobs."
+      },
+      {
+        "title": "Service",
+        "description": "Recurring, deep, move-out or commercial cleaning."
+      },
+      {
+        "title": "Scope",
+        "description": "The condition of the task and any special requests."
+      }
+    ],
+    "includedHeading": "Always included",
+    "included": [
+      "Free, no-obligation quote",
+      "Fixed price with no hidden fees",
+      "Professional equipment and products",
+      "Cleaning done on time"
+    ],
+    "cta": {
+      "heading": "Get your fixed price today",
+      "text": "Describe the task and we will prepare your quote.",
+      "button": "Get a free quote"
+    },
+    "tierCta": "Get a free quote",
+    "tiers": [
+      {
+        "name": "One-off job",
+        "description": "A single thorough clean, whenever you need it.",
+        "features": [
+          "Deep cleaning or move-out cleaning",
+          "Fixed price after a walkthrough or task description",
+          "Professional equipment and products",
+          "No lock-in"
+        ]
+      },
+      {
+        "name": "Recurring cleaning",
+        "description": "Regular cleaning with a fixed price and a fixed plan.",
+        "featured": true,
+        "badge": "Most chosen",
+        "features": [
+          "Weekly or every other week",
+          "Better price than one-off jobs",
+          "The same consistent quality",
+          "Flexible scheduling",
+          "Service deduction for private customers"
+        ]
+      },
+      {
+        "name": "Business agreement",
+        "description": "A tailored cleaning agreement for your company.",
+        "features": [
+          "Adapted to your premises and hours",
+          "Dedicated contact person",
+          "Cleaning during or outside working hours",
+          "Fixed price after a walkthrough"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "metaTitle": "About us",
+    "metaDescription": "All One Rengøring is a registered Danish cleaning company (CVR 40559736) delivering professional cleaning for homes and businesses across Zealand.",
+    "eyebrow": "About us",
+    "heading": "Cleaning you can count on",
+    "paragraphs": [
+      "All One Rengøring is a Danish cleaning company based in Copenhagen. We clean private homes and businesses across Zealand – with the same care as if it were our own.",
+      "Behind the name are people who take pride in their craft: we arrive on time, keep our word, and only leave when the result is something we would come home to ourselves. A clear agreement, a transparent price – and a daily life that is just a little easier for you."
+    ],
+    "values": [
+      {
+        "title": "Thoroughness",
+        "description": "We care about the details – they are the difference between clean and truly clean."
+      },
+      {
+        "title": "Reliability",
+        "description": "We arrive on time and keep what we agree."
+      },
+      {
+        "title": "Integrity",
+        "description": "Clear communication, transparent prices and respect for your home or workplace."
+      }
+    ],
+    "factsHeading": "Company details",
+    "cvrLabel": "CVR no.",
+    "areaLabel": "Service area:",
+    "cta": {
+      "heading": "Shall we talk about your task?",
+      "text": "Call us, or get a free quote via the form.",
+      "button": "Get a free quote"
+    },
+    "imageAlt": "A cleaner wiping a surface in a bright home",
+    "heroImage": {
+      "src": "https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "A cleaner wiping a surface in a bright home"
+    },
+    "blockImages": [
+      {
+        "src": "https://images.pexels.com/photos/4239031/pexels-photo-4239031.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "alt": "Thorough wiping of surfaces in a home"
+      },
+      {
+        "src": "https://images.pexels.com/photos/5591663/pexels-photo-5591663.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "alt": "Preparing premises after cleaning"
+      }
+    ]
+  },
+  "privacy": {
+    "metaTitle": "Privacy policy",
+    "heading": "Privacy policy",
+    "updated": "Last updated: [BEKRÆFT: dato ved lancering]",
+    "sections": [
+      {
+        "heading": "Data controller",
+        "body": "All One Rengøring\nFrederikssundsvej 384, 1th\nCVR no. 40559736\nPhone: +45 28 76 31 86"
+      },
+      {
+        "heading": "What information we process",
+        "body": "When you fill in our quote form, we process the information you provide: name, phone number, email, city, chosen service, company name if applicable, and your description of the task."
+      },
+      {
+        "heading": "Purpose and legal basis",
+        "body": "The information is used solely to answer your enquiry and prepare your quote. Processing is based on your request prior to a potential agreement (GDPR art. 6(1)(b)) and our legitimate interest in answering enquiries (art. 6(1)(f))."
+      },
+      {
+        "heading": "Retention",
+        "body": "We keep your enquiry for as long as necessary to handle it and any subsequent agreement. [BEKRÆFT: konkret opbevaringsperiode]"
+      },
+      {
+        "heading": "Sharing of information",
+        "body": "We do not share your information with third parties for marketing. Enquiries are delivered via our email provider, which processes data on our behalf."
+      },
+      {
+        "heading": "Cookies",
+        "body": "This website uses no marketing or analytics cookies. Only one technically necessary cookie (NEXT_LOCALE) is used to remember your language choice."
+      },
+      {
+        "heading": "Your rights",
+        "body": "You have the right to access, rectify, erase and restrict the processing of your data, and the right to complain to the Danish Data Protection Agency (datatilsynet.dk). Contact us by phone to exercise your rights."
+      }
+    ]
+  },
+  "terms": {
+    "metaTitle": "Terms of service",
+    "heading": "Terms of service",
+    "updated": "Last updated: [BEKRÆFT: dato ved lancering]",
+    "sections": [
+      {
+        "heading": "The company",
+        "body": "All One Rengøring\nFrederikssundsvej 384, 1th\nCVR no. 40559736\nPhone: +45 28 76 31 86"
+      },
+      {
+        "heading": "Services",
+        "body": "We provide cleaning services for homes and businesses in Zealand, including recurring cleaning, deep cleaning, move-out cleaning and commercial cleaning."
+      },
+      {
+        "heading": "Quotes and agreement",
+        "body": "All quotes are free and non-binding. An agreement is only concluded once both parties have confirmed the content, price and time of the quote."
+      },
+      {
+        "heading": "Prices and payment",
+        "body": "The price is stated in the specific quote and includes VAT unless otherwise indicated. Payment terms are agreed in connection with the quote. [BEKRÆFT: standardbetalingsvilkår]"
+      },
+      {
+        "heading": "Cancellation and changes",
+        "body": "Cancellation or rescheduling of an agreed cleaning must take place within reasonable time in advance. [BEKRÆFT: konkret aflysningsfrist]"
+      },
+      {
+        "heading": "Liability and complaints",
+        "body": "If you are not satisfied with a completed cleaning, contact us as soon as possible so we can make it right. [BEKRÆFT: forsikrings- og reklamationsvilkår]"
+      },
+      {
+        "heading": "Right of complaint",
+        "body": "As a consumer you may complain to the Danish Centre for Complaint Resolution via naevneneshus.dk if we cannot find a solution together."
+      }
+    ]
+  },
+  "badges": {
+    "insured": "Fully insured",
+    "guarantee": "Satisfaction guarantee",
+    "cvr": "CVR-registered · 40559736",
+    "fixedPrice": "Fixed price – no hidden fees",
+    "freeQuote": "Free, no-obligation quotes",
+    "area": "We cover all of Zealand"
+  },
+  "serviceDetail": {
+    "includesHeading": "What's included",
+    "suitedForHeading": "Who is it for?",
+    "faqHeading": "Questions about this service",
+    "priceHeading": "What affects the price?",
+    "priceIntro": "We give a fixed price based on your actual task – not a standard rate.",
+    "cta": "Get a free quote",
+    "otherHeading": "Other services",
+    "ctaHeading": "Ready for a fixed price?",
+    "ctaText": "Describe the task and we will come back with a no-obligation quote.",
+    "breadcrumbHome": "Home"
+  },
+  "faqPage": {
+    "metaTitle": "Frequently asked questions",
+    "metaDescription": "Answers to the most common cleaning questions: price, lock-in, insurance, cleaning products, regular staff and service area.",
+    "eyebrow": "FAQ",
+    "heading": "Questions and answers",
+    "intro": "The questions we get most often – answered honestly. If yours is not here, give us a call.",
+    "helpHeading": "Didn't find your answer?",
+    "helpText": "Call us – we are happy to answer everything, also before you decide.",
+    "helpCta": "Get a free quote",
+    "groups": [
+      {
+        "title": "Price and agreement",
+        "items": [
+          {
+            "question": "What does cleaning cost with you?",
+            "answer": "We work with fixed prices rather than standard rates: the price depends on the size of the home or premises, the scope of the task and how often we come. You always get a free, no-obligation quote before deciding."
+          },
+          {
+            "question": "Is the quote binding?",
+            "answer": "No. The quote is free and entirely non-binding. You decide whether to proceed."
+          },
+          {
+            "question": "Is there a lock-in on a recurring agreement?",
+            "answer": "No. You can change or cancel the agreement. We would rather keep customers who stay because they are happy."
+          },
+          {
+            "question": "Can I use the Danish service deduction?",
+            "answer": "Yes. As a private customer you can use the servicefradrag and deduct part of the labour cost from your taxes. Rates change yearly – see the current ones at skat.dk."
+          }
+        ]
+      },
+      {
+        "title": "Practical",
+        "items": [
+          {
+            "question": "Do you bring equipment and cleaning products?",
+            "answer": "Yes. We arrive with professional equipment and cleaning products – you need to provide nothing."
+          },
+          {
+            "question": "Do I need to be home while you clean?",
+            "answer": "That is up to you. Many customers give us access while they are at work, so the home is clean when they return."
+          },
+          {
+            "question": "Do I get the same staff every time?",
+            "answer": "We aim to send the same regular staff. That gives consistent quality – and you never have to explain things twice."
+          },
+          {
+            "question": "How quickly can you start?",
+            "answer": "Send us the task and we will tell you honestly when we can be ready. We do not promise a date we cannot keep."
+          }
+        ]
+      },
+      {
+        "title": "Peace of mind",
+        "items": [
+          {
+            "question": "Is your work insured?",
+            "answer": "Yes. Both our staff and your property are covered, so you can feel secure while we work in your home or premises."
+          },
+          {
+            "question": "What if I am not satisfied?",
+            "answer": "Contact us as soon as possible and we will put it right. We would rather redo the work than have an unhappy customer."
+          },
+          {
+            "question": "How do you handle keys and access?",
+            "answer": "Keys are stored without a name or address, and access arrangements are agreed with you in writing before we start."
+          }
+        ]
+      },
+      {
+        "title": "Service area",
+        "items": [
+          {
+            "question": "Which areas do you cover?",
+            "answer": "We cover all of Zealand – from Copenhagen and Greater Copenhagen to North Zealand, Roskilde, Køge, Næstved and the rest of the island."
+          },
+          {
+            "question": "Does it cost extra if I live far away?",
+            "answer": "Your address in Zealand is not an obstacle. If anything affects the price, we say so in the quote – not afterwards."
+          }
+        ]
+      }
+    ]
+  },
+  "areas": {
+    "metaTitle": "Service area – cleaning across Zealand",
+    "metaDescription": "All One Rengøring covers all of Zealand: Copenhagen, Greater Copenhagen, North Zealand and the rest of the island. Free quotes.",
+    "eyebrow": "Service area",
+    "heading": "We cover all of Zealand",
+    "intro": "Your address is not the deciding factor. We clean for private customers and businesses across the island – from the city districts to West Zealand.",
+    "regions": [
+      {
+        "name": "Copenhagen",
+        "towns": [
+          "København K",
+          "København V",
+          "Frederiksberg",
+          "Østerbro",
+          "Nørrebro",
+          "Vesterbro",
+          "Amager",
+          "Valby"
+        ]
+      },
+      {
+        "name": "Greater Copenhagen",
+        "towns": [
+          "Gentofte",
+          "Gladsaxe",
+          "Herlev",
+          "Ballerup",
+          "Rødovre",
+          "Hvidovre",
+          "Glostrup",
+          "Brøndby",
+          "Søborg"
+        ]
+      },
+      {
+        "name": "North Zealand",
+        "towns": [
+          "Hillerød",
+          "Helsingør",
+          "Farum",
+          "Birkerød",
+          "Hørsholm",
+          "Frederikssund",
+          "Fredensborg"
+        ]
+      },
+      {
+        "name": "Rest of Zealand",
+        "towns": [
+          "Roskilde",
+          "Køge",
+          "Greve",
+          "Solrød",
+          "Næstved",
+          "Slagelse",
+          "Holbæk",
+          "Ringsted",
+          "Kalundborg"
+        ]
+      }
+    ],
+    "note": "Live somewhere not on the list? Call us – we cover all of Zealand and almost always find a solution.",
+    "cta": {
+      "heading": "We come to you too",
+      "text": "Tell us where and what – and get a free quote.",
+      "button": "Get a free quote"
+    }
+  },
+  "home": {
+    "metaTitle": "All One Rengøring — Professional cleaning across Zealand",
+    "metaDescription": "Professional cleaning for homes and businesses across Zealand, Denmark. Fixed prices, free no-obligation quotes. Call +45 28 76 31 86."
+  }
+}

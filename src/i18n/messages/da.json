@@ -1,0 +1,577 @@
+{
+  "a11y": {
+    "skipToContent": "Spring til indhold",
+    "mainNav": "Hovednavigation",
+    "footerNav": "Sidefodsnavigation",
+    "openMenu": "Åbn menu",
+    "closeMenu": "Luk menu",
+    "menu": "Menu",
+    "toHomepage": "Til forsiden",
+    "language": "Sprog"
+  },
+  "nav": {
+    "privat": "Privat",
+    "erhverv": "Erhverv",
+    "priser": "Priser",
+    "omOs": "Om os",
+    "kontakt": "Kontakt",
+    "cta": "Få et gratis tilbud",
+    "call": "Ring til os",
+    "faq": "FAQ",
+    "areas": "Dækningsområde"
+  },
+  "footer": {
+    "servicesHeading": "Ydelser",
+    "companyHeading": "Virksomhed",
+    "cvrLabel": "CVR-nr.",
+    "privacy": "Privatlivspolitik",
+    "terms": "Handelsbetingelser",
+    "serviceAreaNote": "Vi dækker hele Sjælland"
+  },
+  "metadata": {
+    "titleDefault": "All One Rengøring — Professionel rengøring",
+    "description": "All One Rengøring leverer professionel rengøring til private og erhverv på hele Sjælland. Kontakt os for et gratis og uforpligtende tilbud."
+  },
+  "notFound": {
+    "heading": "Siden blev ikke fundet",
+    "body": "Siden findes ikke, eller adressen er ændret.",
+    "backHome": "Gå til forsiden"
+  },
+  "quote": {
+    "metaTitle": "Få et gratis tilbud",
+    "metaDescription": "Udfyld formularen og modtag et gratis og uforpligtende tilbud på professionel rengøring på Sjælland.",
+    "eyebrow": "Gratis tilbud",
+    "heading": "Fortæl os om din opgave",
+    "intro": "Udfyld formularen, så vender vi tilbage med et gratis og uforpligtende tilbud.",
+    "point1": "Gratis og uforpligtende",
+    "point2": "Fast og gennemsigtig pris",
+    "point3": "Vi dækker hele Sjælland",
+    "phoneNote": "Foretrækker du at ringe?",
+    "services": {
+      "fast-rengoering": "Fast rengøring",
+      "hovedrengoering": "Hovedrengøring",
+      "flytterengoering": "Flytterengøring",
+      "erhvervsrengoering": "Erhvervsrengøring"
+    },
+    "form": {
+      "segmentLabel": "Hvem gælder tilbuddet?",
+      "segmentPrivat": "Privat",
+      "segmentErhverv": "Erhverv",
+      "service": "Ydelse",
+      "company": "Virksomhedens navn",
+      "name": "Dit navn",
+      "phone": "Telefon",
+      "email": "E-mail",
+      "city": "By",
+      "message": "Beskriv opgaven (valgfrit)",
+      "submit": "Send og få dit tilbud",
+      "submitting": "Sender…",
+      "errorSummary": "Tjek venligst de markerede felter og prøv igen.",
+      "errors": {
+        "required": "Feltet skal udfyldes",
+        "invalid": "Ugyldig værdi"
+      }
+    }
+  },
+  "thanks": {
+    "metaTitle": "Tak for din henvendelse",
+    "heading": "Tak – vi har modtaget din forespørgsel",
+    "body": "Vi kigger på din opgave og vender tilbage med et gratis og uforpligtende tilbud.",
+    "step1": "Vi gennemgår din beskrivelse og forbereder dit tilbud.",
+    "step2": "Du hører fra os på telefon eller e-mail.",
+    "backHome": "Tilbage til forsiden"
+  },
+  "contact": {
+    "metaTitle": "Kontakt os",
+    "metaDescription": "Kontakt All One Rengøring – professionel rengøring til private og erhverv på hele Sjælland. Ring på +45 28 76 31 86.",
+    "eyebrow": "Kontakt",
+    "heading": "Vi er klar til at hjælpe",
+    "intro": "Ring til os, eller send en forespørgsel via formularen – så vender vi tilbage hurtigst muligt.",
+    "phoneHeading": "Ring til os",
+    "phoneText": "Den hurtigste vej til et svar.",
+    "addressHeading": "Adresse",
+    "cvrLabel": "CVR-nr.",
+    "areaNote": "Vi dækker hele Sjælland.",
+    "ctaHeading": "Klar til et tilbud?",
+    "ctaText": "Gratis, uforpligtende og med fast pris.",
+    "ctaButton": "Få et gratis tilbud",
+    "image": {
+      "src": "https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Lyst kontor, rengjort og klar til brug"
+    },
+    "areaHeading": "Dækningsområde"
+  },
+  "privat": {
+    "metaTitle": "Privatrengøring på Sjælland",
+    "metaDescription": "Fast rengøring, hovedrengøring og flytterengøring til private på hele Sjælland. Gratis og uforpligtende tilbud.",
+    "eyebrow": "Privat",
+    "heading": "Rengøring i dit hjem",
+    "intro": "Fra fast, tilbagevendende rengøring til den store hovedrengøring – vi tilpasser opgaven efter dit hjem og din hverdag, og du får altid en fast og gennemsigtig pris.",
+    "services": [
+      {
+        "title": "Fast rengøring",
+        "description": "Tilbagevendende rengøring hver uge eller hver 14. dag, planlagt efter din hverdag.",
+        "image": {
+          "src": "https://images.pexels.com/photos/4239013/pexels-photo-4239013.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "alt": "Nyrengjort køkken med aftørrede bordplader og blank vask"
+        },
+        "href": "/ydelser/fast-rengoering"
+      },
+      {
+        "title": "Hovedrengøring",
+        "description": "Grundig rengøring fra loft til gulv – ideel til forår, efter fest eller efter håndværkere.",
+        "image": {
+          "src": "https://images.pexels.com/photos/4108715/pexels-photo-4108715.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "alt": "Badeværelse efter afkalkning af fliser og armaturer"
+        },
+        "href": "/ydelser/hovedrengoering"
+      },
+      {
+        "title": "Flytterengøring",
+        "description": "Komplet rengøring ved fraflytning, så boligen står klar til overdragelse og syn.",
+        "image": {
+          "src": "https://images.pexels.com/photos/6197122/pexels-photo-6197122.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "alt": "Tom lejlighed efter flytterengøring, klar til fraflytningssyn"
+        },
+        "href": "/ydelser/flytterengoering"
+      }
+    ],
+    "serviceCta": "Se ydelsen",
+    "noteHeading": "Godt at vide som privatkunde",
+    "noteText": "Som privatkunde kan du benytte servicefradraget og trække en del af arbejdslønnen fra i skat. Se de aktuelle satser på skat.dk.",
+    "points": [
+      "Gratis og uforpligtende tilbud",
+      "Fast og gennemsigtig pris",
+      "Vi dækker hele Sjælland"
+    ],
+    "cta": {
+      "heading": "Skal vi tage os af rengøringen derhjemme?",
+      "text": "Fortæl os om din bolig – det tager kun få minutter.",
+      "button": "Få et gratis tilbud"
+    },
+    "heroImage": {
+      "src": "https://images.pexels.com/photos/6197109/pexels-photo-6197109.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Stue efter rengøring: støvsugede gulve og aftørrede flader"
+    }
+  },
+  "erhverv": {
+    "metaTitle": "Erhvervsrengøring på Sjælland",
+    "metaDescription": "Professionel erhvervsrengøring til kontorer og erhvervslokaler på hele Sjælland. Gratis og uforpligtende tilbud.",
+    "eyebrow": "Erhverv",
+    "heading": "Rengøring til din virksomhed",
+    "intro": "Rene lokaler er en del af jeres ansigt udadtil – og af et sundt arbejdsmiljø. Vi tilrettelægger erhvervsrengøringen efter jeres lokaler og åbningstider, i eller uden for arbejdstiden.",
+    "services": [
+      {
+        "title": "Kontorrengøring",
+        "description": "Løbende rengøring af kontorer og fælles­arealer – aftørring af arbejdsstationer, gulve, køkken og toiletter.",
+        "image": {
+          "src": "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "alt": "Kontorlandskab efter erhvervsrengøring"
+        },
+        "href": "/ydelser/erhvervsrengoering"
+      },
+      {
+        "title": "Erhvervslokaler",
+        "description": "Butikker, klinikker og andre erhvervslokaler – tilpasset jeres branche og krav.",
+        "image": {
+          "src": "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "alt": "Rengjort reception i erhvervsbygning"
+        },
+        "href": "/ydelser/erhvervsrengoering"
+      },
+      {
+        "title": "Klargøring",
+        "description": "Hovedrengøring og klargøring af lokaler ved indflytning, fraflytning eller efter håndværkere.",
+        "image": {
+          "src": "https://images.pexels.com/photos/2451616/pexels-photo-2451616.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          "alt": "Mødelokale med aftørrede borde og støvsugede gulve"
+        },
+        "href": "/ydelser/hovedrengoering"
+      }
+    ],
+    "serviceCta": "Se ydelsen",
+    "noteHeading": "Et samarbejde, I kan regne med",
+    "noteText": "I får en fast aftale med klare rammer – og rengøring, der bliver udført ordentligt og til tiden, hver gang.",
+    "points": [
+      "Fast kontaktperson",
+      "Fleksible tidspunkter",
+      "Gratis og uforpligtende tilbud"
+    ],
+    "cta": {
+      "heading": "Skal vi give jer et tilbud?",
+      "text": "Beskriv jeres lokaler og behov – vi vender hurtigt tilbage.",
+      "button": "Få et gratis tilbud"
+    },
+    "heroImage": {
+      "src": "https://images.pexels.com/photos/3182759/pexels-photo-3182759.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Moderne dansk kontor efter rengøring"
+    }
+  },
+  "pricing": {
+    "metaTitle": "Priser på rengøring",
+    "metaDescription": "Gennemsigtige priser på rengøring til private og erhverv på Sjælland. Få en fast pris med et gratis og uforpligtende tilbud.",
+    "eyebrow": "Priser",
+    "heading": "Fast pris – ingen overraskelser",
+    "intro": "Vi giver dig en fast og gennemsigtig pris ud fra din konkrete opgave, i stedet for en standardpris der ikke passer til virkeligheden. Tilbuddet er gratis og uforpligtende.",
+    "factorsHeading": "Det påvirker prisen",
+    "factors": [
+      {
+        "title": "Størrelse",
+        "description": "Boligens eller lokalernes areal og antal rum."
+      },
+      {
+        "title": "Frekvens",
+        "description": "Fast rengøring giver en bedre pris end enkeltopgaver."
+      },
+      {
+        "title": "Ydelse",
+        "description": "Fast rengøring, hovedrengøring, flytterengøring eller erhverv."
+      },
+      {
+        "title": "Omfang",
+        "description": "Opgavens stand og eventuelle særlige ønsker."
+      }
+    ],
+    "includedHeading": "Altid inkluderet",
+    "included": [
+      "Gratis og uforpligtende tilbud",
+      "Fast pris uden skjulte gebyrer",
+      "Professionelt udstyr og midler",
+      "Rengøring udført til tiden"
+    ],
+    "cta": {
+      "heading": "Få din faste pris i dag",
+      "text": "Beskriv opgaven, så udarbejder vi dit tilbud.",
+      "button": "Få et gratis tilbud"
+    },
+    "tierCta": "Få et gratis tilbud",
+    "tiers": [
+      {
+        "name": "Enkelt opgave",
+        "description": "Én grundig rengøring, når behovet opstår.",
+        "features": [
+          "Hovedrengøring eller flytterengøring",
+          "Fast pris efter besigtigelse eller opgavebeskrivelse",
+          "Professionelt udstyr og midler",
+          "Ingen binding"
+        ]
+      },
+      {
+        "name": "Fast rengøring",
+        "description": "Tilbagevendende rengøring med fast pris og fast plan.",
+        "featured": true,
+        "badge": "Mest valgte",
+        "features": [
+          "Hver uge eller hver 14. dag",
+          "Bedre pris end enkeltopgaver",
+          "Samme faste kvalitetsniveau",
+          "Fleksible tidspunkter",
+          "Servicefradrag for private"
+        ]
+      },
+      {
+        "name": "Erhvervsaftale",
+        "description": "Skræddersyet rengøringsaftale til virksomheder.",
+        "features": [
+          "Tilpasset jeres lokaler og åbningstider",
+          "Fast kontaktperson",
+          "Rengøring i eller uden for arbejdstiden",
+          "Fast pris efter besigtigelse"
+        ]
+      }
+    ]
+  },
+  "about": {
+    "metaTitle": "Om os",
+    "metaDescription": "All One Rengøring er et registreret dansk rengøringsfirma (CVR 40559736), der leverer professionel rengøring til private og erhverv på hele Sjælland.",
+    "eyebrow": "Om os",
+    "heading": "Rengøring, du kan regne med",
+    "paragraphs": [
+      "All One Rengøring er et dansk rengøringsfirma med base i København. Vi gør rent for private hjem og virksomheder på hele Sjælland – og vi gør det med den samme omhu, som var det vores eget.",
+      "Bag navnet står mennesker, der holder af deres fag: Vi kommer til tiden, holder hvad vi lover, og går først, når resultatet er noget, vi selv ville komme hjem til. En klar aftale, en gennemsigtig pris – og en hverdag, der bare er lidt lettere for dig."
+    ],
+    "values": [
+      {
+        "title": "Grundighed",
+        "description": "Vi går op i detaljerne – det er dem, der gør forskellen mellem rent og virkelig rent."
+      },
+      {
+        "title": "Pålidelighed",
+        "description": "Vi kommer til tiden og holder, hvad vi aftaler."
+      },
+      {
+        "title": "Ordentlighed",
+        "description": "Klar kommunikation, gennemsigtige priser og respekt for dit hjem eller din arbejdsplads."
+      }
+    ],
+    "factsHeading": "Virksomhedsoplysninger",
+    "cvrLabel": "CVR-nr.",
+    "areaLabel": "Dækningsområde:",
+    "cta": {
+      "heading": "Skal vi tage en snak om din opgave?",
+      "text": "Ring til os, eller få et gratis tilbud via formularen.",
+      "button": "Få et gratis tilbud"
+    },
+    "imageAlt": "Professionel rengøring med omhu",
+    "heroImage": {
+      "src": "https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "alt": "Rengøringsmedarbejder tørrer overflade af i et lyst hjem"
+    },
+    "blockImages": [
+      {
+        "src": "https://images.pexels.com/photos/4239031/pexels-photo-4239031.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "alt": "Grundig aftørring af overflader i hjemmet"
+      },
+      {
+        "src": "https://images.pexels.com/photos/5591663/pexels-photo-5591663.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "alt": "Klargøring af lokaler efter rengøring"
+      }
+    ]
+  },
+  "privacy": {
+    "metaTitle": "Privatlivspolitik",
+    "heading": "Privatlivspolitik",
+    "updated": "Senest opdateret: [BEKRÆFT: dato ved lancering]",
+    "sections": [
+      {
+        "heading": "Dataansvarlig",
+        "body": "All One Rengøring\nFrederikssundsvej 384, 1th\nCVR-nr. 40559736\nTelefon: +45 28 76 31 86"
+      },
+      {
+        "heading": "Hvilke oplysninger vi behandler",
+        "body": "Når du udfylder vores tilbudsformular, behandler vi de oplysninger, du selv angiver: navn, telefonnummer, e-mail, by, valgt ydelse, eventuelt virksomhedsnavn samt din beskrivelse af opgaven."
+      },
+      {
+        "heading": "Formål og retsgrundlag",
+        "body": "Oplysningerne bruges udelukkende til at besvare din henvendelse og udarbejde dit tilbud. Behandlingen sker på grundlag af din anmodning forud for en eventuel aftale (GDPR art. 6, stk. 1, litra b) og vores legitime interesse i at besvare henvendelser (litra f)."
+      },
+      {
+        "heading": "Opbevaring",
+        "body": "Vi opbevarer din henvendelse, så længe det er nødvendigt for at behandle den og en eventuel efterfølgende aftale. [BEKRÆFT: konkret opbevaringsperiode]"
+      },
+      {
+        "heading": "Deling af oplysninger",
+        "body": "Vi videregiver ikke dine oplysninger til tredjeparter til markedsføring. Henvendelser sendes via vores e-mailleverandør, der behandler data på vores vegne."
+      },
+      {
+        "heading": "Cookies",
+        "body": "Hjemmesiden anvender ingen markedsførings- eller analysecookies. Der anvendes alene en teknisk nødvendig cookie (NEXT_LOCALE) til at huske dit sprogvalg."
+      },
+      {
+        "heading": "Dine rettigheder",
+        "body": "Du har ret til indsigt, berigtigelse, sletning og begrænsning af behandlingen af dine oplysninger samt ret til at klage til Datatilsynet (datatilsynet.dk). Kontakt os på telefon for at gøre brug af dine rettigheder."
+      }
+    ]
+  },
+  "terms": {
+    "metaTitle": "Handelsbetingelser",
+    "heading": "Handelsbetingelser",
+    "updated": "Senest opdateret: [BEKRÆFT: dato ved lancering]",
+    "sections": [
+      {
+        "heading": "Virksomheden",
+        "body": "All One Rengøring\nFrederikssundsvej 384, 1th\nCVR-nr. 40559736\nTelefon: +45 28 76 31 86"
+      },
+      {
+        "heading": "Ydelser",
+        "body": "Vi leverer rengøringsydelser til private og erhverv på Sjælland, herunder fast rengøring, hovedrengøring, flytterengøring og erhvervsrengøring."
+      },
+      {
+        "heading": "Tilbud og aftale",
+        "body": "Alle tilbud er gratis og uforpligtende. En aftale er først indgået, når begge parter har bekræftet tilbuddets indhold, pris og tidspunkt."
+      },
+      {
+        "heading": "Priser og betaling",
+        "body": "Prisen fremgår af det konkrete tilbud og er inklusive moms, medmindre andet er angivet. Betalingsvilkår aftales i forbindelse med tilbuddet. [BEKRÆFT: standardbetalingsvilkår]"
+      },
+      {
+        "heading": "Aflysning og ændringer",
+        "body": "Aflysning eller flytning af en aftalt rengøring skal ske i rimelig tid forinden. [BEKRÆFT: konkret aflysningsfrist]"
+      },
+      {
+        "heading": "Ansvar og reklamation",
+        "body": "Er du ikke tilfreds med en udført rengøring, skal du kontakte os hurtigst muligt, så vi kan rette op på det. [BEKRÆFT: forsikrings- og reklamationsvilkår]"
+      },
+      {
+        "heading": "Klageadgang",
+        "body": "Som forbruger kan du klage til Center for Klageløsning / Forbrugerklagenævnet via naevneneshus.dk, hvis vi ikke finder en løsning sammen."
+      }
+    ]
+  },
+  "badges": {
+    "insured": "Forsikret og ansvarsdækket",
+    "guarantee": "Tilfredshedsgaranti",
+    "cvr": "CVR-registreret · 40559736",
+    "fixedPrice": "Fast pris – ingen skjulte gebyrer",
+    "freeQuote": "Gratis, uforpligtende tilbud",
+    "area": "Vi dækker hele Sjælland"
+  },
+  "serviceDetail": {
+    "includesHeading": "Det indeholder",
+    "suitedForHeading": "Hvem er det til?",
+    "faqHeading": "Spørgsmål om denne ydelse",
+    "priceHeading": "Hvad påvirker prisen?",
+    "priceIntro": "Vi giver en fast pris ud fra din konkrete opgave – ikke en standardtakst.",
+    "cta": "Få et gratis tilbud",
+    "otherHeading": "Andre ydelser",
+    "ctaHeading": "Klar til en fast pris?",
+    "ctaText": "Beskriv opgaven, så vender vi tilbage med et uforpligtende tilbud.",
+    "breadcrumbHome": "Forside"
+  },
+  "faqPage": {
+    "metaTitle": "Ofte stillede spørgsmål",
+    "metaDescription": "Svar på de mest almindelige spørgsmål om rengøring: pris, binding, forsikring, rengøringsmidler, fast personale og dækningsområde.",
+    "eyebrow": "FAQ",
+    "heading": "Spørgsmål og svar",
+    "intro": "De spørgsmål vi oftest får – besvaret ærligt. Er dit spørgsmål ikke med, så ring til os.",
+    "helpHeading": "Fandt du ikke svaret?",
+    "helpText": "Ring til os – vi svarer gerne på det hele, også før du beslutter dig.",
+    "helpCta": "Få et gratis tilbud",
+    "groups": [
+      {
+        "title": "Pris og aftale",
+        "items": [
+          {
+            "question": "Hvad koster rengøring hos jer?",
+            "answer": "Vi arbejder med faste priser frem for standardtakster: prisen afhænger af boligens eller lokalernes størrelse, opgavens omfang og hvor ofte vi kommer. Du får altid et gratis og uforpligtende tilbud, før du beslutter dig."
+          },
+          {
+            "question": "Er tilbuddet bindende?",
+            "answer": "Nej. Tilbuddet er gratis og helt uforpligtende. Du bestemmer selv, om du vil gå videre."
+          },
+          {
+            "question": "Er der binding på en fast aftale?",
+            "answer": "Nej. Du kan ændre eller opsige aftalen. Vi vil hellere have kunder, der bliver, fordi de er tilfredse."
+          },
+          {
+            "question": "Kan jeg få servicefradrag?",
+            "answer": "Ja. Som privatkunde kan du benytte servicefradraget og trække en del af arbejdslønnen fra i skat. Satserne ændrer sig fra år til år – se de aktuelle på skat.dk."
+          }
+        ]
+      },
+      {
+        "title": "Praktisk",
+        "items": [
+          {
+            "question": "Medbringer I selv udstyr og rengøringsmidler?",
+            "answer": "Ja. Vi kommer med professionelt udstyr og rengøringsmidler – du skal ikke stille noget frem."
+          },
+          {
+            "question": "Skal jeg være hjemme, når I gør rent?",
+            "answer": "Det bestemmer du selv. Mange giver os adgang, mens de er på arbejde, så hjemmet er rent, når de kommer hjem."
+          },
+          {
+            "question": "Får jeg det samme personale hver gang?",
+            "answer": "Vi tilstræber at sende det samme faste personale. Det giver ensartet kvalitet – og du slipper for at forklare tingene forfra."
+          },
+          {
+            "question": "Hvor hurtigt kan I starte?",
+            "answer": "Kontakt os med opgaven, så melder vi ærligt tilbage, hvornår vi kan være klar. Vi lover ikke en dato, vi ikke kan holde."
+          }
+        ]
+      },
+      {
+        "title": "Tryghed",
+        "items": [
+          {
+            "question": "Er jeres arbejde forsikret?",
+            "answer": "Ja. Både medarbejdere og dit inventar er dækket, så du kan være tryg, mens vi arbejder i dit hjem eller dine lokaler."
+          },
+          {
+            "question": "Hvad gør jeg, hvis jeg ikke er tilfreds?",
+            "answer": "Kontakt os hurtigst muligt, så retter vi op på det. Vi vil hellere gøre arbejdet om end have en utilfreds kunde."
+          },
+          {
+            "question": "Hvordan håndterer I nøgler og adgang?",
+            "answer": "Nøgler opbevares uden navn eller adresse, og adgangsforhold aftales skriftligt med dig, før vi starter."
+          }
+        ]
+      },
+      {
+        "title": "Dækningsområde",
+        "items": [
+          {
+            "question": "Hvilke områder dækker I?",
+            "answer": "Vi kører i hele Sjælland – fra København og Storkøbenhavn til Nordsjælland, Roskilde, Køge, Næstved og resten af øen."
+          },
+          {
+            "question": "Koster det ekstra, hvis jeg bor langt væk?",
+            "answer": "Din adresse på Sjælland er ikke en forhindring. Er der forhold, der påvirker prisen, siger vi det i tilbuddet – ikke bagefter."
+          }
+        ]
+      }
+    ]
+  },
+  "areas": {
+    "metaTitle": "Dækningsområde – rengøring på hele Sjælland",
+    "metaDescription": "All One Rengøring dækker hele Sjælland: København, Storkøbenhavn, Nordsjælland og resten af øen. Gratis tilbud.",
+    "eyebrow": "Dækningsområde",
+    "heading": "Vi kører i hele Sjælland",
+    "intro": "Din adresse er ikke afgørende. Vi gør rent for private og virksomheder over hele øen – fra brokvartererne til Vestsjælland.",
+    "regions": [
+      {
+        "name": "København",
+        "towns": [
+          "København K",
+          "København V",
+          "Frederiksberg",
+          "Østerbro",
+          "Nørrebro",
+          "Vesterbro",
+          "Amager",
+          "Valby"
+        ]
+      },
+      {
+        "name": "Storkøbenhavn",
+        "towns": [
+          "Gentofte",
+          "Gladsaxe",
+          "Herlev",
+          "Ballerup",
+          "Rødovre",
+          "Hvidovre",
+          "Glostrup",
+          "Brøndby",
+          "Søborg"
+        ]
+      },
+      {
+        "name": "Nordsjælland",
+        "towns": [
+          "Hillerød",
+          "Helsingør",
+          "Farum",
+          "Birkerød",
+          "Hørsholm",
+          "Frederikssund",
+          "Fredensborg"
+        ]
+      },
+      {
+        "name": "Øvrige Sjælland",
+        "towns": [
+          "Roskilde",
+          "Køge",
+          "Greve",
+          "Solrød",
+          "Næstved",
+          "Slagelse",
+          "Holbæk",
+          "Ringsted",
+          "Kalundborg"
+        ]
+      }
+    ],
+    "note": "Bor du et sted, der ikke står på listen? Ring til os – vi dækker hele Sjælland, og vi finder næsten altid en løsning.",
+    "cta": {
+      "heading": "Vi kommer også til dig",
+      "text": "Fortæl os hvor og hvad – så får du et gratis tilbud.",
+      "button": "Få et gratis tilbud"
+    }
+  },
+  "home": {
+    "metaTitle": "All One Rengøring — Professionel rengøring på hele Sjælland",
+    "metaDescription": "Professionel rengøring til private og erhverv på hele Sjælland. Fast pris, gratis og uforpligtende tilbud. Ring +45 28 76 31 86."
+  }
+}
