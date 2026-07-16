@@ -205,7 +205,7 @@ const da: Record<ServiceSlug, ServiceDetail> = {
   },
 };
 
-const en: Record<ServiceSlug, ServiceDetail> = {
+const _en: Record<ServiceSlug, ServiceDetail> = {
   'fast-rengoering': {
     title: 'Recurring cleaning',
     metaTitle: 'Recurring home cleaning in Zealand',
