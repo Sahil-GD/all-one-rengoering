@@ -380,5 +380,4 @@ const _en: Record<ServiceSlug, ServiceDetail> = {
 
 export const serviceContent: Record<Locale, Record<ServiceSlug, ServiceDetail>> = {
   da,
-  en,
 };
