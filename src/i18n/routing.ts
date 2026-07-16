@@ -7,7 +7,7 @@ import { defineRouting } from 'next-intl/routing';
  * breaking these URLs).
  */
 export const routing = defineRouting({
-  locales: ['da', 'en'],
+  locales: ['da'],
   defaultLocale: 'da',
   localePrefix: 'as-needed',
 });
