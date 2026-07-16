@@ -19,7 +19,7 @@ export interface HeroProps {
     icon: 'shield' | 'pin' | 'tag';
     title: string;
     text: string;
-    claim?: string;
+    claim?: string | undefined;
   }[];
   /** Trust ledger — pre-filtered by the claims registry. */
   trustItems: readonly { label: string; claim?: string }[];
@@ -71,7 +71,14 @@ export function Hero({
             {eyebrow}
           </span>
 
-          <h1 className="relative mt-7 text-[clamp(2.75rem,1.6rem+3.9vw,5rem)] leading-[1.02] font-semibold tracking-[-0.025em] uppercase">
+          <h1
+            className="relative mt-7 font-semibold uppercase"
+            style={{
+              fontSize: 'clamp(2.75rem, 1.6rem + 3.9vw, 5rem)',
+              lineHeight: 1.02,
+              letterSpacing: '-0.025em',
+            }}
+          >
             <span className="wipe-base">
               <span className="block">{sloganLine1}</span>
               <span className="block">{sloganLine2}</span>
@@ -123,7 +130,11 @@ export function Hero({
           {/* Radial light — lifts the photo off the page. */}
           <div
             aria-hidden
-            className="absolute -inset-10 -z-10 rounded-full bg-[radial-gradient(circle_at_center,var(--color-green-soft)_0%,transparent_65%)] opacity-70"
+            className="absolute -inset-10 -z-10 rounded-full opacity-70"
+            style={{
+              backgroundImage:
+                'radial-gradient(circle at center, var(--color-green-soft) 0%, transparent 65%)',
+            }}
           />
           <div className="float-a">
             <MediaFrame
