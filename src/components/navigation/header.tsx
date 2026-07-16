@@ -2,7 +2,6 @@ import { Link } from '@/i18n/navigation';
 import { getTranslations } from 'next-intl/server';
 
 import { Container } from '@/components/layout/container';
-import { LocaleSwitcher } from '@/components/navigation/locale-switcher';
 import { MobileNav } from '@/components/navigation/mobile-nav';
 import { NavLink } from '@/components/navigation/nav-link';
 import { Button } from '@/components/ui/button';
@@ -11,12 +10,6 @@ import { mainNav, quoteHref } from '@/config/navigation';
 import { phoneHref, siteConfig } from '@/config/site';
 import { Phone } from 'lucide-react';
 
-/**
- * Sticky site header. Elevation on scroll is a pure-CSS scroll-driven
- * animation (progressive; see .site-header in globals.css) — the hairline
- * border is the universal baseline.
- *
- */
 export async function Header() {
   const [tNav, tA11y] = await Promise.all([
     getTranslations('nav'),
@@ -51,12 +44,7 @@ export async function Header() {
         </nav>
 
         <div className="flex items-center gap-1 sm:gap-3">
-          <LocaleSwitcher
-            label={tA11y('language')}
-            className="hidden lg:flex"
-          />
-          {/* Tap-to-call — the industry's second conversion path. */}
-          <a
+          
             href={phoneHref}
             className="flex h-11 items-center gap-2 rounded-control px-2 text-sm font-medium text-ink sm:px-3"
           >
@@ -66,7 +54,7 @@ export async function Header() {
             </span>
             <span className="sr-only md:hidden">{tNav('call')}</span>
           </a>
-         <Button href={quoteHref} className="hidden lg:inline-flex">
+          <Button href={quoteHref} className="hidden lg:inline-flex">
             {tNav('cta')}
           </Button>
           <MobileNav
