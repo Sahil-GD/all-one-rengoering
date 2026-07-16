@@ -427,7 +427,7 @@ const da: HomeContent = {
   },
 };
 
-const en: HomeContent = {
+const _en: HomeContent = {
   hero: {
     eyebrow: 'Professional cleaning company in Zealand',
     sloganLine1: 'Your mess.',
