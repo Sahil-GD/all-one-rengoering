@@ -1,21 +1,5 @@
 'use client';
 
-/*
- * Signature interaction: the visitor drags a handle to "clean" the room.
- * The slogan (YOUR MESS. OUR MISSION.) made literal, and the hero's wipe
- * gesture scaled from typography to photography.
- *
- * Accessibility: the control is a native range input (keyboard arrows,
- * screen-reader announced). Pointer drag is layered on top, never
- * replacing it. Reduced motion is unaffected — the interaction is
- * user-driven, not autoplaying.
- *
- * Imagery contract: `before` and `after` may be two real photos of the
- * same space. Until real job photography exists, the same image is passed
- * for both and the "before" layer is dulled with a CSS filter — an honest
- * illustration of the service, never a claim about a specific customer job.
- */
-
 import { useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 
 import { MediaFrame } from '@/components/ui/media-frame';
@@ -24,14 +8,12 @@ import { type MediaRef } from '@/content/home';
 export interface BeforeAfterProps {
   before: MediaRef;
   after: MediaRef;
-  /** True when `before` is the same photo as `after` (dulled via filter). */
-  simulated?: boolean;
+  simulated?: boolean | undefined;
   labelBefore: string;
   labelAfter: string;
   instruction: string;
   sliderLabel: string;
-  /** Shown while `simulated` — discloses that this is an illustration. */
-  exampleLabel?: string;
+  exampleLabel?: string | undefined;
 }
 
 export function BeforeAfter({
@@ -80,7 +62,6 @@ export function BeforeAfter({
         onPointerCancel={onPointerUp}
         className="relative touch-none overflow-hidden rounded-panel shadow-overlay select-none"
       >
-        {/* AFTER — the clean result, full width underneath. */}
         <MediaFrame
           ratio="video"
           image={after}
@@ -88,7 +69,6 @@ export function BeforeAfter({
           className="w-full"
         />
 
-        {/* BEFORE — clipped from the left by the handle position. */}
         <div
           aria-hidden
           className="absolute inset-0"
@@ -102,7 +82,6 @@ export function BeforeAfter({
           />
         </div>
 
-        {/* The wipe line + handle — brand green, mirrors the hero sweep. */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-y-0 w-1 -translate-x-1/2 bg-accent-secondary"
@@ -125,7 +104,6 @@ export function BeforeAfter({
           </span>
         </div>
 
-        {/* Corner labels. */}
         <span className="absolute top-5 left-5 rounded-full bg-ink/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-surface uppercase backdrop-blur-sm">
           {labelBefore}
         </span>
@@ -139,7 +117,6 @@ export function BeforeAfter({
         )}
       </div>
 
-      {/* The real control — keyboard and screen-reader accessible. */}
       <label className="flex items-center gap-3">
         <span className="sr-only">{sliderLabel}</span>
         <input
