@@ -704,7 +704,7 @@ const _en: HomeContent = {
   },
 };
 
-export const homeContent: Record<Locale, HomeContent> = { da, en };
+export const homeContent: Record<Locale, HomeContent> = { da };
 
 /** Trust surfaces render only what the business has actually confirmed. */
 export function visibleTrustItems(content: HomeContent) {
