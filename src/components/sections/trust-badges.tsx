@@ -15,8 +15,7 @@ export interface TrustBadgesProps {
   items: ReadonlyArray<{
     icon: 'shield' | 'badge' | 'file' | 'tag' | 'pin';
     label: string;
-    /** Unconfirmed claims never render (see config/claims.ts). */
-    claim?: ClaimKey;
+    claim?: ClaimKey | undefined;
   }>;
 }
 
@@ -28,7 +27,6 @@ const icons: Record<'shield' | 'badge' | 'file' | 'tag' | 'pin', LucideIcon> = {
   pin: MapPin,
 };
 
-/** Credential strip — every item passes through the claims registry. */
 export function TrustBadges({ items }: TrustBadgesProps) {
   const visible = items.filter((item) => !item.claim || isConfirmed(item.claim));
   if (visible.length === 0) return null;
