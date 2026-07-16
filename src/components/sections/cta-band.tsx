@@ -59,9 +59,13 @@ export function CtaBand({
               </Button>
               <p className="text-sm text-accent-contrast/75">
                 {phoneNote}{' '}
-                <span className="tabular-nums font-medium text-accent-contrast">
+                <Button
+                  href={phoneHref}
+                  variant="ghost"
+                  className="h-auto p-0 tabular-nums font-medium text-accent-contrast underline underline-offset-4"
+                >
                   {phone}
-                </span>
+                </Button>
               </p>
             </div>
           </div>
