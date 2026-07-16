@@ -27,7 +27,10 @@ export function CtaBand({
   return (
     <section className="pb-16 lg:pb-24">
       <Container>
-        <div data-reveal className="relative overflow-hidden rounded-panel bg-accent px-6 py-14 sm:px-10 md:px-14 md:py-16 lg:py-20">
+        <div
+          data-reveal
+          className="relative overflow-hidden rounded-panel bg-accent px-6 py-14 sm:px-10 md:px-14 md:py-16 lg:py-20"
+        >
           {/* Soft brand glow — depth on the panel, no imagery needed. */}
           <div
             aria-hidden
@@ -40,32 +43,37 @@ export function CtaBand({
           {/* Faint dot grid — texture without imagery. */}
           <div
             aria-hidden
-            className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgb(255_255_255/0.06)_1px,transparent_0)] bg-[size:22px_22px]"
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                'radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.06) 1px, transparent 0)',
+              backgroundSize: '22px 22px',
+            }}
           />
           <div className="relative flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
-        <div className="max-w-xl">
-          <h2 className="text-h2 text-balance text-accent-contrast">{heading}</h2>
-          <p className="mt-3 text-lg text-pretty text-accent-contrast/75">{sub}</p>
-        </div>
-        <div className="flex w-full flex-col items-start gap-3 md:w-auto md:shrink-0 md:items-end">
-          <Button
-            variant="inverse"
-            size="lg"
-            href={cta.href}
-            className="w-full sm:w-auto"
-          >
-            {cta.label}
-          </Button>
-          <p className="text-sm text-accent-contrast/75">
-            {phoneNote}{' '}
-            <a
-              href={phoneHref}
-              className="tabular-nums font-medium text-accent-contrast underline underline-offset-4 decoration-accent-contrast/40 hover:decoration-accent-contrast"
-            >
-              {phone}
-            </a>
-          </p>
-          </div>
+            <div className="max-w-xl">
+              <h2 className="text-h2 text-balance text-accent-contrast">{heading}</h2>
+              <p className="mt-3 text-lg text-pretty text-accent-contrast/75">{sub}</p>
+            </div>
+            <div className="flex w-full flex-col items-start gap-3 md:w-auto md:shrink-0 md:items-end">
+              <Button
+                variant="inverse"
+                size="lg"
+                href={cta.href}
+                className="w-full sm:w-auto"
+              >
+                {cta.label}
+              </Button>
+              <p className="text-sm text-accent-contrast/75">
+                {phoneNote}{' '}
+                
+                  href={phoneHref}
+                  className="tabular-nums font-medium text-accent-contrast underline underline-offset-4 decoration-accent-contrast/40 hover:decoration-accent-contrast"
+                >
+                  {phone}
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </Container>
