@@ -1,12 +1,9 @@
 'use client';
 
-// Client: owns the <dialog> open/close interaction.
-
 import { Menu, X } from 'lucide-react';
 import { useRef } from 'react';
 
 import { Container } from '@/components/layout/container';
-import { LocaleSwitcher } from '@/components/navigation/locale-switcher';
 import { Logo } from '@/components/ui/logo';
 import { Button } from '@/components/ui/button';
 import { NavLink } from '@/components/navigation/nav-link';
@@ -15,7 +12,6 @@ import { phoneHref } from '@/config/site';
 import { Phone } from 'lucide-react';
 
 export interface MobileNavProps {
-  /** Resolved label/href pairs — translated by the server parent. */
   items: ReadonlyArray<{ href: string; label: string }>;
   labels: {
     open: string;
@@ -27,12 +23,6 @@ export interface MobileNavProps {
   };
 }
 
-/**
- * Full-screen mobile navigation on the native <dialog> element:
- * showModal() provides focus trapping, Esc-to-close, and top-layer
- * rendering for free. Entrance transition + scroll lock live in
- * globals.css (.mobile-nav).
- */
 export function MobileNav({ items, labels }: MobileNavProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -51,8 +41,6 @@ export function MobileNav({ items, labels }: MobileNavProps) {
 
       <dialog ref={dialogRef} aria-label={labels.menu} className="mobile-nav">
         <div className="flex h-full flex-col">
-          {/* Mirrors the header row so the close control sits exactly
-              where the open control was — no spatial jump. */}
           <Container className="flex h-16 shrink-0 items-center justify-between border-b border-border">
             <Logo />
             <button
@@ -84,7 +72,6 @@ export function MobileNav({ items, labels }: MobileNavProps) {
           </nav>
 
           <Container className="flex shrink-0 flex-col gap-3 border-t border-border py-4">
-            <LocaleSwitcher label={labels.language} className="self-start" />
             <Button href={quoteHref} size="lg" onClick={close} className="w-full">
               {labels.cta}
             </Button>
