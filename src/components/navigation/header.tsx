@@ -66,7 +66,7 @@ export async function Header() {
             </span>
             <span className="sr-only md:hidden">{tNav('call')}</span>
           </a>
-          <Button href={quoteHref} className="hidden sm:inline-flex">
+         <Button href={quoteHref} className="hidden lg:inline-flex">
             {tNav('cta')}
           </Button>
           <MobileNav
