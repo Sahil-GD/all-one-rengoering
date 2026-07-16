@@ -9,22 +9,21 @@ export interface TransformationSectionProps {
   lead: string;
   before: MediaRef;
   after: MediaRef;
-  simulated?: boolean;
+  simulated?: boolean | undefined;
   labelBefore: string;
   labelAfter: string;
   instruction: string;
   sliderLabel: string;
-  exampleLabel?: string;
+  exampleLabel?: string | undefined;
 }
 
-/** The homepage's signature moment — the slogan, made literal and interactive. */
 export function TransformationSection({
   eyebrow,
   heading,
   lead,
   before,
   after,
-  simulated,
+  simulated = false,
   labelBefore,
   labelAfter,
   instruction,
