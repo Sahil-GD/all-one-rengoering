@@ -6,16 +6,11 @@ export interface CtaBandProps {
   heading: string;
   sub: string;
   cta: Cta;
-  /** Phone fallback: "eller ring på {phone}" (blueprint CTA rules). */
   phoneNote: string;
   phone: string;
   phoneHref: string;
 }
 
-/**
- * Closing conversion band — the page's only high-contrast surface, so
- * the final ask is unmissable without shouting anywhere else.
- */
 export function CtaBand({
   heading,
   sub,
@@ -31,7 +26,6 @@ export function CtaBand({
           data-reveal
           className="relative overflow-hidden rounded-panel bg-accent px-6 py-14 sm:px-10 md:px-14 md:py-16 lg:py-20"
         >
-          {/* Soft brand glow — depth on the panel, no imagery needed. */}
           <div
             aria-hidden
             className="absolute -top-28 -right-20 h-80 w-80 rounded-full bg-accent-secondary/25 blur-3xl"
@@ -40,7 +34,6 @@ export function CtaBand({
             aria-hidden
             className="absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-accent-contrast/10 blur-3xl"
           />
-          {/* Faint dot grid — texture without imagery. */}
           <div
             aria-hidden
             className="absolute inset-0"
