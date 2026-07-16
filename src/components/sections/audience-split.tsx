@@ -14,21 +14,21 @@ export interface AudienceSplitProps {
     title: string;
     description: string;
     href: string;
-    image?: MediaRef;
+    image?: MediaRef | undefined;
   }>;
   linkLabel: string;
 }
 
-/**
- * Routes the two audiences (privat/erhverv) in one decision. Whole card
- * is the link target — one large hit area, no competing controls inside.
- */
 export function AudienceSplit({ cards, linkLabel }: AudienceSplitProps) {
   return (
     <Section className="relative overflow-hidden">
       <div
         aria-hidden
-        className="absolute top-1/2 left-1/2 -z-10 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,var(--color-accent-soft)_0%,transparent_70%)] opacity-60"
+        className="absolute top-1/2 left-1/2 -z-10 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-60"
+        style={{
+          backgroundImage:
+            'radial-gradient(circle at center, var(--color-accent-soft) 0%, transparent 70%)',
+        }}
       />
       <Container>
         <div className="grid gap-5 md:grid-cols-2 md:gap-6">
