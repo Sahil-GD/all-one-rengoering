@@ -12,16 +12,13 @@ export interface HeroProps {
   support: string;
   primaryCta: Cta;
   secondaryCta: Cta;
-  /** The hero photograph — proof beside the promise. */
   image: MediaRef;
-  /** Glass cards overlapping the image edge. */
   floatingCards: readonly {
     icon: 'shield' | 'pin' | 'tag';
     title: string;
     text: string;
     claim?: string | undefined;
   }[];
-  /** Trust ledger — pre-filtered by the claims registry. */
   trustItems: readonly { label: string; claim?: string }[];
 }
 
@@ -31,14 +28,6 @@ const cardIcons: Record<'shield' | 'pin' | 'tag', LucideIcon> = {
   tag: Tag,
 };
 
-/*
- * Split composition: the promise (type) on the left, the proof (photo) on
- * the right, with trust cards overlapping the image edge so the two halves
- * read as one layered composition rather than two stacked zones.
- *
- * The slogan keeps its dual-layer wipe (see globals.css). It is the LCP
- * element, so it never animates opacity — only colour, which is free.
- */
 export function Hero({
   eyebrow,
   sloganLine1,
@@ -52,7 +41,6 @@ export function Hero({
 }: HeroProps) {
   return (
     <section className="relative isolate overflow-hidden border-b border-border">
-      {/* Fresh top wash + ambient brand blobs — continuous, subtle. */}
       <div
         aria-hidden
         className="absolute inset-x-0 top-0 -z-10 h-72 bg-gradient-to-b from-green-soft/45 to-transparent"
@@ -61,7 +49,6 @@ export function Hero({
       <div aria-hidden className="hero-blob hero-blob-b -z-10" />
 
       <Container className="grid items-center gap-14 py-14 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-20">
-        {/* LEFT — the promise. */}
         <div>
           <span className="enter enter-d1 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-1.5 text-sm font-medium shadow-raised">
             <span
@@ -125,9 +112,7 @@ export function Hero({
           </ul>
         </div>
 
-        {/* RIGHT — the proof. */}
         <div className="enter enter-d3 relative lg:pl-6">
-          {/* Radial light — lifts the photo off the page. */}
           <div
             aria-hidden
             className="absolute -inset-10 -z-10 rounded-full opacity-70"
@@ -146,12 +131,9 @@ export function Hero({
             />
           </div>
 
-          {/* Overlay trust cards — overlapping the image edge. */}
           <div className={`mt-4 grid gap-3 lg:mt-0 lg:block ${floatingCards.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
             {floatingCards.map((card, index) => {
               const Icon = cardIcons[card.icon];
-              /* Positions adapt to however many cards survive the claims
-                 gate — two confirmed cards must not leave a hole. */
               const layouts =
                 floatingCards.length >= 3
                   ? [
