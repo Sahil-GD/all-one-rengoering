@@ -62,4 +62,4 @@ Milestone 1 (foundation) complete: tokens, global styles, App Router,
 i18n (da), root metadata, LocalBusiness JSON-LD, sitemap/robots, site
 config. The homepage is an interim page (verified facts only) replaced in
 the page-assembly phase. Blueprint and roadmap maintained outside the repo
-by the project owner.
+by the project owner. Deployed
