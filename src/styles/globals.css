@@ -557,8 +557,7 @@
 }
 
 /* On navy surfaces the navy ring would vanish — invert it. */
-.bg-accent :focus-visible,
-[class*='bg-accent '] :focus-visible {
+.bg-accent :focus-visible {
   outline-color: var(--color-surface);
 }
 
