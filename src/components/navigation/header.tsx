@@ -44,16 +44,17 @@ export async function Header() {
         </nav>
 
         <div className="flex items-center gap-1 sm:gap-3">
-          
+          <Button
             href={phoneHref}
-            className="flex h-11 items-center gap-2 rounded-control px-2 text-sm font-medium text-ink sm:px-3"
+            variant="ghost"
+            className="flex h-11 items-center gap-2 px-2 text-sm font-medium text-ink sm:px-3"
           >
             <Phone size={20} strokeWidth={1.5} aria-hidden />
             <span className="hidden tabular-nums md:inline">
               {siteConfig.contact.phone}
             </span>
             <span className="sr-only md:hidden">{tNav('call')}</span>
-          </a>
+          </Button>
           <Button href={quoteHref} className="hidden lg:inline-flex">
             {tNav('cta')}
           </Button>
