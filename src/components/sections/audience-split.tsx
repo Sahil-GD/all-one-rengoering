@@ -30,6 +30,11 @@ export function AudienceSplit({ cards, linkLabel }: AudienceSplitProps) {
             'radial-gradient(circle at center, var(--color-accent-soft) 0%, transparent 70%)',
         }}
       />
+      <div
+        aria-hidden
+        className="deco-orb deco-orb-teal deco-float -z-10 h-64 w-64"
+        style={{ top: '5%', left: '2%' }}
+      />
       <Container>
         <div className="grid gap-5 md:grid-cols-2 md:gap-6">
           {cards.map((card, index) => (
