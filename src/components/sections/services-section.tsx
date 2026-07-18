@@ -24,7 +24,6 @@ export interface ServicesSectionProps {
   items: readonly ServiceItem[];
 }
 
-/* One icon set, one stroke weight (design system §5). */
 const icons: Record<ServiceIcon, LucideIcon> = {
   home: Home,
   sparkles: Sparkles,
@@ -32,11 +31,6 @@ const icons: Record<ServiceIcon, LucideIcon> = {
   building: Building2,
 };
 
-/**
- * Service overview — informational cards inside a soft brand panel
- * (links arrive with the service subpages). Anchor target of the hero\'s
- * secondary CTA.
- */
 export function ServicesSection({
   id,
   eyebrow,
@@ -48,11 +42,11 @@ export function ServicesSection({
     <Section id={id} className="scroll-mt-16 pt-0">
       <Container>
         <div className="relative overflow-hidden rounded-panel bg-accent-soft/60 px-5 py-12 sm:px-8 md:p-12 lg:p-16">
-          {/* Decorative depth — soft brand shape, never competes with content. */}
           <div
             aria-hidden
-            className="absolute -right-24 -bottom-24 h-80 w-80 rounded-full bg-green-soft/50 blur-3xl"
+            className="absolute -right-24 -bottom-24 h-80 w-80 rounded-full bg-teal-soft/60 blur-3xl"
           />
+          <div aria-hidden className="deco-dots" style={{ opacity: 0.25 }} />
           <header data-reveal className="mb-10 max-w-2xl lg:mb-14">
             <p className="text-overline uppercase text-accent-secondary">
               {eyebrow}
@@ -80,7 +74,7 @@ export function ServicesSection({
                     <div className="flex items-center gap-2.5">
                       <span
                         aria-hidden
-                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-control bg-green-soft text-accent-secondary"
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-control bg-teal-soft text-teal-strong"
                       >
                         <Icon size={16} strokeWidth={1.5} />
                       </span>
@@ -99,7 +93,7 @@ export function ServicesSection({
                             size={16}
                             strokeWidth={2.5}
                             aria-hidden
-                            className="mt-0.5 shrink-0 text-accent-secondary"
+                            className="mt-0.5 shrink-0 text-teal"
                           />
                           {feature}
                         </li>
