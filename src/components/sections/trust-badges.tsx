@@ -42,7 +42,7 @@ export function TrustBadges({ items }: TrustBadgesProps) {
                 size={20}
                 strokeWidth={1.5}
                 aria-hidden
-                className="shrink-0 text-accent-secondary"
+                className="shrink-0 text-teal"
               />
               <span className="tabular-nums">{item.label}</span>
             </li>
