@@ -47,6 +47,17 @@ export function Hero({
       />
       <div aria-hidden className="hero-blob hero-blob-a -z-10" />
       <div aria-hidden className="hero-blob hero-blob-b -z-10" />
+      <div
+        aria-hidden
+        className="deco-orb deco-orb-teal deco-float -z-10 h-72 w-72"
+        style={{ top: '8%', right: '6%' }}
+      />
+      <div
+        aria-hidden
+        className="deco-ring deco-float -z-10 hidden h-40 w-40 lg:block"
+        style={{ bottom: '12%', left: '3%', animationDelay: '1.5s' }}
+      />
+      <div aria-hidden className="deco-dots -z-10" style={{ opacity: 0.35 }} />
 
       <Container className="grid items-center gap-14 py-14 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-20">
         <div>
@@ -102,7 +113,7 @@ export function Hero({
               >
                 <span
                   aria-hidden
-                  className="flex h-4 w-4 items-center justify-center rounded-full bg-green-soft text-[0.6rem] font-bold text-accent-secondary"
+                  className="flex h-4 w-4 items-center justify-center rounded-full bg-teal-soft text-[0.6rem] font-bold text-teal-strong"
                 >
                   ✓
                 </span>
@@ -153,7 +164,7 @@ export function Hero({
                 >
                   <span
                     aria-hidden
-                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-green-soft text-accent-secondary"
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teal-soft text-teal-strong"
                   >
                     <Icon size={16} strokeWidth={1.5} />
                   </span>
