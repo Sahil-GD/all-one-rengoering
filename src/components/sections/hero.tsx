@@ -40,80 +40,73 @@ export function Hero({
   trustItems,
 }: HeroProps) {
   return (
-    <section className="relative isolate overflow-hidden border-b border-border">
+    <section className="bg-gradient-hero gradient-animate relative isolate overflow-hidden text-white">
+      <div aria-hidden className="grid-lines" />
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 -z-10 h-72 bg-gradient-to-b from-green-soft/45 to-transparent"
-      />
-      <div aria-hidden className="hero-blob hero-blob-a -z-10" />
-      <div aria-hidden className="hero-blob hero-blob-b -z-10" />
-      <div
-        aria-hidden
-        className="deco-orb deco-orb-teal deco-float -z-10 h-72 w-72"
-        style={{ top: '8%', right: '6%' }}
+        className="glow-orb glow-blue deco-float"
+        style={{ top: '-6%', right: '4%', height: '26rem', width: '26rem' }}
       />
       <div
         aria-hidden
-        className="deco-ring deco-float -z-10 hidden h-40 w-40 lg:block"
-        style={{ bottom: '12%', left: '3%', animationDelay: '1.5s' }}
+        className="glow-orb glow-royal deco-float"
+        style={{
+          bottom: '-14%',
+          left: '-6%',
+          height: '24rem',
+          width: '24rem',
+          animationDelay: '2s',
+        }}
       />
-      <div aria-hidden className="deco-dots -z-10" style={{ opacity: 0.35 }} />
 
-      <Container className="grid items-center gap-14 py-14 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-20">
+      <Container className="relative z-10 grid items-center gap-14 py-16 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-24">
         <div>
-          <span className="enter enter-d1 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-1.5 text-sm font-medium shadow-raised">
+          <span className="enter enter-d1 glass inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-medium text-white/90">
             <span
               aria-hidden
-              className="pulse-dot h-1.5 w-1.5 rounded-full bg-accent-secondary"
+              className="pulse-dot h-1.5 w-1.5 rounded-full bg-blue-glow"
             />
             {eyebrow}
           </span>
 
           <h1
-            className="relative mt-7 font-semibold uppercase"
+            className="enter enter-d2 relative mt-7 font-semibold uppercase"
             style={{
-              fontSize: 'clamp(2.75rem, 1.6rem + 3.9vw, 5rem)',
-              lineHeight: 1.02,
-              letterSpacing: '-0.025em',
+              fontSize: 'clamp(2.9rem, 1.6rem + 4.2vw, 5.4rem)',
+              lineHeight: 1.0,
+              letterSpacing: '-0.03em',
             }}
           >
-            <span className="wipe-base">
-              <span className="block">{sloganLine1}</span>
-              <span className="block">{sloganLine2}</span>
-            </span>
-            <span aria-hidden className="wipe-over">
-              <span className="block">{sloganLine1}</span>
-              <span className="block">{sloganLine2}</span>
-            </span>
-            <span aria-hidden className="wipe-glint">
-              <span className="block">{sloganLine1}</span>
-              <span className="block">{sloganLine2}</span>
-            </span>
-            <span aria-hidden className="wipe-sweep" />
+            <span className="block text-white">{sloganLine1}</span>
+            <span className="text-gradient block">{sloganLine2}</span>
           </h1>
 
-          <p className="enter enter-d2 mt-6 max-w-md text-lg text-pretty text-ink-secondary">
+          <p className="enter enter-d3 mt-6 max-w-md text-lg text-pretty text-white/70">
             {support}
           </p>
 
           <div className="enter enter-d3 mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center">
-            <Button href={primaryCta.href} size="lg">
+            <Button href={primaryCta.href} size="lg" className="btn-premium border-0">
               {primaryCta.label}
             </Button>
-            <Button href={secondaryCta.href} variant="secondary" size="lg">
+            <Button
+              href={secondaryCta.href}
+              size="lg"
+              className="glass border-0 text-white hover:brightness-110"
+            >
               {secondaryCta.label}
             </Button>
           </div>
 
-          <ul className="enter enter-d4 mt-9 flex flex-wrap gap-x-7 gap-y-2.5 border-t border-border pt-6">
+          <ul className="enter enter-d4 mt-9 flex flex-wrap gap-x-7 gap-y-2.5 border-t border-white/15 pt-6">
             {trustItems.map((item) => (
               <li
                 key={item.label}
-                className="flex items-center gap-2 text-sm text-ink-secondary"
+                className="flex items-center gap-2 text-sm text-white/70"
               >
                 <span
                   aria-hidden
-                  className="flex h-4 w-4 items-center justify-center rounded-full bg-teal-soft text-[0.6rem] font-bold text-teal-strong"
+                  className="flex h-4 w-4 items-center justify-center rounded-full bg-blue-glow/25 text-[0.6rem] font-bold text-blue-glow"
                 >
                   ✓
                 </span>
@@ -126,10 +119,10 @@ export function Hero({
         <div className="enter enter-d3 relative lg:pl-6">
           <div
             aria-hidden
-            className="absolute -inset-10 -z-10 rounded-full opacity-70"
+            className="absolute -inset-8 -z-10 rounded-full opacity-80"
             style={{
               backgroundImage:
-                'radial-gradient(circle at center, var(--color-green-soft) 0%, transparent 65%)',
+                'radial-gradient(circle at center, var(--color-blue-glow) 0%, transparent 62%)',
             }}
           />
           <div className="float-a">
@@ -138,11 +131,15 @@ export function Hero({
               image={image}
               priority
               sizes="(min-width: 1024px) 45vw, 100vw"
-              className="rounded-panel shadow-overlay"
+              className="rounded-panel shadow-overlay ring-1 ring-white/10"
             />
           </div>
 
-          <div className={`mt-4 grid gap-3 lg:mt-0 lg:block ${floatingCards.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}>
+          <div
+            className={`mt-4 grid gap-3 lg:mt-0 lg:block ${
+              floatingCards.length >= 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2'
+            }`}
+          >
             {floatingCards.map((card, index) => {
               const Icon = cardIcons[card.icon];
               const layouts =
@@ -160,17 +157,19 @@ export function Hero({
               return (
                 <div
                   key={card.title}
-                  className={`enter enter-d5 flex gap-3 rounded-card border border-border/50 bg-surface/85 p-4 shadow-overlay backdrop-blur-md lg:max-w-[14.5rem] ${position ?? ''}`}
+                  className={`enter enter-d5 glass flex gap-3 rounded-card p-4 text-white shadow-overlay lg:max-w-[14.5rem] ${position ?? ''}`}
                 >
                   <span
                     aria-hidden
-                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teal-soft text-teal-strong"
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-glow/25 text-blue-glow"
                   >
                     <Icon size={16} strokeWidth={1.5} />
                   </span>
                   <span>
-                    <span className="block text-sm font-semibold">{card.title}</span>
-                    <span className="mt-0.5 block text-xs leading-relaxed text-ink-secondary">
+                    <span className="block text-sm font-semibold text-white">
+                      {card.title}
+                    </span>
+                    <span className="mt-0.5 block text-xs leading-relaxed text-white/65">
                       {card.text}
                     </span>
                   </span>
