@@ -18,6 +18,14 @@
   /* ------------------------------------------------------------------ */
   --color-surface: #fcfcfa; /* page background */
  --color-surface-tint: #f2f6f5; /* alternating section tone — airy */
+  --color-blue: #1b5fd0;
+  --color-blue-bright: #3b82f6;
+  --color-blue-deep: #0b2a5c;
+  --color-blue-soft: #e7eefb;
+  --color-blue-glow: #4f8bff;
+  --gradient-hero: linear-gradient(150deg, #0a2340 0%, #0d3155 42%, #1b5fd0 100%);
+  --gradient-accent: linear-gradient(135deg, #1b5fd0 0%, #3b82f6 100%);
+  --gradient-deep: linear-gradient(160deg, #0b2a5c 0%, #0d3155 55%, #12448f 100%);
   --color-ink: #191918; /* primary text — ~16:1 on surface (AAA) */
   --color-ink-secondary: #56564f; /* secondary text — ≥7:1 on surface */
   --color-border: #e6e6df; /* hairline separation */
