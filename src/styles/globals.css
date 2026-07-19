@@ -623,3 +623,59 @@
 @media (prefers-reduced-motion: reduce) {
   .deco-float { animation: none; }
 }
+.bg-gradient-hero { background: var(--gradient-hero); }
+.bg-gradient-accent { background: var(--gradient-accent); }
+.bg-gradient-deep { background: var(--gradient-deep); }
+.text-gradient {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.btn-premium {
+  background: var(--gradient-accent);
+  color: #fff;
+  box-shadow: 0 1px 2px rgba(11, 42, 92, 0.2), 0 8px 24px -8px rgba(27, 95, 208, 0.55);
+  transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
+}
+.btn-premium:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: 0 2px 4px rgba(11, 42, 92, 0.25), 0 14px 34px -8px rgba(27, 95, 208, 0.7);
+}
+.glow-orb {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(70px);
+  opacity: 0.55;
+}
+.glow-blue { background: radial-gradient(circle, var(--color-blue-glow) 0%, transparent 68%); }
+.glow-royal { background: radial-gradient(circle, var(--color-blue) 0%, transparent 70%); }
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.grid-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: radial-gradient(ellipse at 50% 40%, black 20%, transparent 72%);
+}
+@keyframes gradient-pan {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.gradient-animate {
+  background-size: 180% 180%;
+  animation: gradient-pan 18s ease infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .gradient-animate { animation: none; }
+}
