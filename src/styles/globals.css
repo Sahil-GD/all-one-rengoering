@@ -41,7 +41,8 @@
   --color-accent-contrast: #ffffff;
   --color-accent-soft: #e9eef6; /* navy tint — soft panels, chips */
   --color-green-bright: #4fd07a;
-  --color-header: #0a2340; #e8f2eb; /* green tint — icon chips, highlights */
+  --color-header: #0a2340;
+  --color-green-soft: #e8f2eb;  
   --color-teal: #0e8f8f;
   --color-teal-strong: #0a6f6f;
   --color-teal-soft: #e3f4f3;
