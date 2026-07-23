@@ -1,19 +1,31 @@
-/**
- * Navigation model from the approved IA. Labels are translation keys
- * resolved by consumers (no copy outside i18n/messages).
- *
- * Service subpage dropdowns are intentionally absent until the service
- * list is confirmed ([BEKRÆFT: ydelsesliste]) — hub pages carry that
- * navigation. Target routes are built in the page-assembly milestone.
- */
-export interface NavItem {
-  labelKey: string;
+export interface NavChild {
+  label: string;
   href: string;
 }
 
+export interface NavItem {
+  labelKey: string;
+  href: string;
+  children?: readonly NavChild[];
+}
+
 export const mainNav: readonly NavItem[] = [
-  { labelKey: 'privat', href: '/privat' },
-  { labelKey: 'erhverv', href: '/erhverv' },
+  {
+    labelKey: 'privat',
+    href: '/privat',
+    children: [
+      { label: 'Fast rengøring', href: '/ydelser/fast-rengoering' },
+      { label: 'Hovedrengøring', href: '/ydelser/hovedrengoering' },
+      { label: 'Flytterengøring', href: '/ydelser/flytterengoering' },
+    ],
+  },
+  {
+    labelKey: 'erhverv',
+    href: '/erhverv',
+    children: [
+      { label: 'Erhvervsrengøring', href: '/ydelser/erhvervsrengoering' },
+    ],
+  },
   { labelKey: 'priser', href: '/priser' },
   { labelKey: 'omOs', href: '/om-os' },
   { labelKey: 'kontakt', href: '/kontakt' },
@@ -29,5 +41,4 @@ export const supportNav: readonly NavItem[] = [
   { labelKey: 'areas', href: '/omraader' },
 ];
 
-/** The sitewide primary conversion target. */
 export const quoteHref = '/tilbud';
