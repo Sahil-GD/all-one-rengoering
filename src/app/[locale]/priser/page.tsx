@@ -25,14 +25,72 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 }
 
-/* Tier icons — one-off / recurring / business, same family and weight. */
 const tierIcons: readonly LucideIcon[] = [Sparkles, CalendarClock, Building2];
 
-/**
- * PRISER — deliberately photography-free: pricing is a clarity page, so
- * typography and structure carry it. Tinted canvas + comparison cards
- * with a highlighted middle tier. No hero image, unlike every other page.
- */
+interface PriceTier {
+  name: string;
+  price: string;
+  unit: string;
+  priceNote: string;
+  description: string;
+  features: readonly string[];
+  featured?: boolean | undefined;
+  badge?: string | undefined;
+}
+
+const priceTiers: readonly PriceTier[] = [
+  {
+    name: 'Privat rengøring',
+    price: '349 kr.',
+    unit: 'pr. time',
+    priceNote: 'inkl. moms og kørsel',
+    description:
+      'Fast rengøring, hovedrengøring og flytterengøring i private hjem.',
+    features: [
+      'Udstyr og rengøringsmidler inkluderet',
+      'Kørsel inkluderet i prisen',
+      'Mulighed for servicefradrag',
+      'Gratis og uforpligtende tilbud',
+    ],
+  },
+  {
+    name: 'Erhverv – fast aftale',
+    price: '279 kr.',
+    unit: 'pr. time',
+    priceNote: 'ekskl. moms',
+    description:
+      'Fast rengøringsaftale for kontorer, butikker og klinikker.',
+    features: [
+      'Bedste timepris ved fast aftale',
+      'Fast kontaktperson',
+      'Rengøring i eller uden for åbningstid',
+      'Udstyr og midler inkluderet',
+    ],
+    featured: true,
+    badge: 'Bedste pris',
+  },
+  {
+    name: 'Erhverv – enkeltopgave',
+    price: '316 kr.',
+    unit: 'pr. time',
+    priceNote: 'ekskl. moms',
+    description:
+      'Enkeltstående opgaver uden fast aftale – fx efter håndværkere.',
+    features: [
+      'Ingen binding',
+      'Hurtig opstart',
+      'Udstyr og midler inkluderet',
+      'Gratis og uforpligtende tilbud',
+    ],
+  },
+];
+
+const priceFootnote =
+  'Alle priser er pr. time pr. medarbejder på adressen. Parkering afregnes ' +
+  'særskilt, hvis det er nødvendigt. Som privatkunde kan du benytte ' +
+  'servicefradraget og trække en del af arbejdslønnen fra i skat – se de ' +
+  'aktuelle satser på skat.dk.';
+
 export default async function PricingPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -43,18 +101,11 @@ export default async function PricingPage({ params }: PageProps) {
     description: string;
   }>;
   const included = t.raw('included') as readonly string[];
-  const tiers = t.raw('tiers') as ReadonlyArray<{
-    name: string;
-    description: string;
-    features: readonly string[];
-    featured?: boolean;
-    badge?: string;
-  }>;
+  const tiers = priceTiers;
 
   return (
     <>
       <section className="relative overflow-hidden bg-mist">
-        {/* Decorative shapes — priser signature (geometry, not photography). */}
         <div
           aria-hidden
           className="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-sage/40 blur-3xl"
@@ -64,10 +115,10 @@ export default async function PricingPage({ params }: PageProps) {
             {t('eyebrow')}
           </p>
           <h1 className="mx-auto mt-3 max-w-3xl text-h1 text-balance">
-            {t('heading')}
+            Faste timepriser – ingen overraskelser
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-pretty text-ink-secondary">
-            {t('intro')}
+            Vores priser er pr. time pr. medarbejder og inkluderer udstyr, rengøringsmidler og kørsel. Du får altid et gratis og uforpligtende tilbud, før vi går i gang.
           </p>
         </Container>
       </section>
@@ -105,8 +156,27 @@ export default async function PricingPage({ params }: PageProps) {
                 })()}
               </span>
               <h2 className="text-h3">{tier.name}</h2>
+              <p className="mt-3 flex items-baseline gap-1.5">
+                <span className="text-4xl font-semibold tracking-tight">
+                  {tier.price}
+                </span>
+                <span
+                  className={`text-sm font-medium ${
+                    tier.featured ? 'text-accent-contrast/70' : 'text-ink-secondary'
+                  }`}
+                >
+                  {tier.unit}
+                </span>
+              </p>
               <p
-                className={`mt-2 text-sm leading-relaxed text-pretty ${
+                className={`mt-1 text-xs ${
+                  tier.featured ? 'text-accent-contrast/60' : 'text-ink-secondary'
+                }`}
+              >
+                {tier.priceNote}
+              </p>
+              <p
+                className={`mt-4 text-sm leading-relaxed text-pretty ${
                   tier.featured ? 'text-accent-contrast/75' : 'text-ink-secondary'
                 }`}
               >
@@ -137,9 +207,11 @@ export default async function PricingPage({ params }: PageProps) {
             </li>
           ))}
         </ul>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-sm text-pretty text-ink-secondary">
+          {priceFootnote}
+        </p>
       </Container>
 
-      {/* Price factors as a hairline table — not cards, unlike other pages. */}
       <div className="bg-cream">
         <Container className="py-20 lg:py-24">
           <h2 data-reveal className="max-w-xl text-h2 text-balance">
