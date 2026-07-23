@@ -518,24 +518,17 @@
   background-clip: text;
   color: transparent;
 }
-.btn-premium {
-  background: var(--gradient-accent);
+ .btn-premium {
+  background: linear-gradient(135deg, #1f7a41 0%, #18683a 100%);
   color: #fff;
-  box-shadow: 0 1px 2px rgba(15, 39, 68, 0.2), 0 8px 24px -8px rgba(47, 111, 228, 0.5);
+  box-shadow: 0 1px 2px rgba(15, 39, 68, 0.2), 0 8px 24px -8px rgba(31, 122, 65, 0.5);
   transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
 }
 .btn-premium:hover {
   transform: translateY(-2px);
-  filter: brightness(1.06);
-  box-shadow: 0 2px 4px rgba(15, 39, 68, 0.25), 0 14px 34px -8px rgba(47, 111, 228, 0.65);
+  filter: brightness(1.08);
+  box-shadow: 0 2px 4px rgba(15, 39, 68, 0.25), 0 14px 34px -8px rgba(31, 122, 65, 0.6);
 }
-.glow-orb {
-  position: absolute;
-  border-radius: 9999px;
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(70px);
-  opacity: 0.55;
 }
 .glow-blue { background: radial-gradient(circle, var(--color-blue-glow) 0%, transparent 68%); }
 .glow-royal { background: radial-gradient(circle, var(--color-blue) 0%, transparent 70%); }
