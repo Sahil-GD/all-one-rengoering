@@ -83,8 +83,7 @@ export async function Header() {
           </Button>
           <Button
             href={quoteHref}
-            className="btn-brand hidden rounded-full border-0 px-6 font-bold tracking-wide uppercase lg:inline-flex"
-          >
+            className="btn-brand hidden whitespace-nowrap rounded-full border-0 px-6 font-bold tracking-wide uppercase lg:inline-flex"          >
             {tNav('cta')}
           </Button>
           <MobileNav
