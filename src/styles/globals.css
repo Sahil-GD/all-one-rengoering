@@ -679,3 +679,8 @@
 @media (prefers-reduced-motion: reduce) {
   .gradient-animate { animation: none; }
 }
+.accent-word {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-accent-secondary);
+}
