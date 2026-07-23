@@ -158,8 +158,8 @@ const da: HomeContent = {
     primaryCta: { label: 'Få et gratis tilbud', href: quoteHref },
     secondaryCta: { label: 'Se vores ydelser', href: '#ydelser' },
     image: {
-      src: img.cleanSpray,
-      alt: 'Professionel rengøring af overflade i et lyst hjem',
+     src: img.livingRoom,
+      alt: 'Lys, nyrengjort stue i et dansk hjem',
     },
     floatingCards: [
       {
