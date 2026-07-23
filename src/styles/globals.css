@@ -1,43 +1,42 @@
-/*
- * Design tokens — All One Rengøring
- */
 @import 'tailwindcss';
 
 @theme {
-  --color-surface: #fcfcfa;
-  --color-surface-tint: #f2f6f5;
-  --color-blue: #1b5fd0;
-  --color-blue-bright: #3b82f6;
-  --color-blue-deep: #0b2a5c;
-  --color-blue-soft: #e7eefb;
-  --color-blue-glow: #4f8bff;
-  --gradient-hero: linear-gradient(150deg, #0a2340 0%, #0d3155 42%, #1b5fd0 100%);
-  --gradient-accent: linear-gradient(135deg, #1b5fd0 0%, #3b82f6 100%);
-  --gradient-deep: linear-gradient(160deg, #0b2a5c 0%, #0d3155 55%, #12448f 100%);
-  --color-ink: #191918;
-  --color-ink-secondary: #56564f;
-  --color-border: #e6e6df;
+  --color-surface: #ffffff;
+  --color-surface-tint: #f8fafc;
+  --color-ink: #13253a;
+  --color-ink-secondary: #5f6b7a;
+  --color-border: #e6edf5;
 
-  --color-accent: #0d3155;
-  --color-accent-strong: #0a2743;
-  --color-accent-secondary: #2f8348;
+  --color-accent: #0f2744;
+  --color-accent-strong: #0a1c33;
+  --color-accent-secondary: #39c36b;
   --color-accent-contrast: #ffffff;
-  --color-accent-soft: #e9eef6;
-  --color-green-bright: #4fd07a;
-  --color-header: #0a2340;
-  --color-green-soft: #e8f2eb;
-  --color-teal: #0e8f8f;
-  --color-teal-strong: #0a6f6f;
-  --color-teal-soft: #e3f4f3;
-  --color-sky-soft: #eaf4fb;
+  --color-accent-soft: #e8eef7;
+  --color-green-soft: #e4f7ec;
+  --color-green-bright: #39c36b;
+  --color-header: #0f2744;
+
+  --color-blue: #2f6fe4;
+  --color-blue-bright: #5a8ff0;
+  --color-blue-deep: #0f2744;
+  --color-blue-soft: #e8f0fe;
+  --color-blue-glow: #6fa0f5;
+  --color-teal: #39c36b;
+  --color-teal-strong: #2a9d54;
+  --color-teal-soft: #e4f7ec;
+  --color-sky-soft: #eef4fc;
+
+  --gradient-hero: linear-gradient(150deg, #0f2744 0%, #16385f 45%, #2f6fe4 100%);
+  --gradient-accent: linear-gradient(135deg, #2f6fe4 0%, #5a8ff0 100%);
+  --gradient-deep: linear-gradient(160deg, #0f2744 0%, #16385f 55%, #2f6fe4 100%);
 
   --radius-control: 0.625rem;
   --radius-card: 1rem;
   --radius-panel: 2rem;
 
-  --color-cream: #f7f4ee;
-  --color-mist: #eef3f8;
-  --color-sage: #dceadf;
+  --color-cream: #f8fafc;
+  --color-mist: #eef4fc;
+  --color-sage: #e4f7ec;
 
   --color-error: #b42318;
   --color-success: #067647;
@@ -72,9 +71,9 @@
   --text-overline--font-weight: 500;
 
   --shadow-raised:
-    0 1px 2px rgb(25 25 24 / 0.04), 0 4px 12px rgb(25 25 24 / 0.06);
+    0 1px 2px rgb(15 39 68 / 0.04), 0 4px 12px rgb(15 39 68 / 0.07);
   --shadow-overlay:
-    0 4px 8px rgb(25 25 24 / 0.06), 0 16px 40px rgb(25 25 24 / 0.14);
+    0 4px 8px rgb(15 39 68 / 0.06), 0 16px 40px rgb(15 39 68 / 0.14);
 
   --ease-emphasis: cubic-bezier(0.22, 1, 0.36, 1);
 
@@ -171,7 +170,7 @@
 }
 
 .wipe-base {
-  color: rgb(25 25 24 / 0.24);
+  color: rgb(19 37 58 / 0.22);
 }
 
 .wipe-over {
@@ -522,13 +521,13 @@
 .btn-premium {
   background: var(--gradient-accent);
   color: #fff;
-  box-shadow: 0 1px 2px rgba(11, 42, 92, 0.2), 0 8px 24px -8px rgba(27, 95, 208, 0.55);
+  box-shadow: 0 1px 2px rgba(15, 39, 68, 0.2), 0 8px 24px -8px rgba(47, 111, 228, 0.5);
   transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
 }
 .btn-premium:hover {
   transform: translateY(-2px);
   filter: brightness(1.06);
-  box-shadow: 0 2px 4px rgba(11, 42, 92, 0.25), 0 14px 34px -8px rgba(27, 95, 208, 0.7);
+  box-shadow: 0 2px 4px rgba(15, 39, 68, 0.25), 0 14px 34px -8px rgba(47, 111, 228, 0.65);
 }
 .glow-orb {
   position: absolute;
@@ -574,7 +573,7 @@
 }
 
 .header-dark {
-  background-color: #0a2340;
+  background-color: #0f2744;
   border-bottom: 1px solid rgb(255 255 255 / 0.08);
 }
 .nav-underline {
@@ -588,7 +587,7 @@
   bottom: 0.15rem;
   height: 3px;
   border-radius: 2px;
-  background-color: #4fd07a;
+  background-color: #39c36b;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -634,14 +633,14 @@
   transform: scaleY(1);
 }
 .btn-brand {
-  background-color: #4fd07a;
-  color: #06231a;
+  background-color: #39c36b;
+  color: #0f2744;
   transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 200ms ease, filter 200ms ease;
 }
 .btn-brand:hover {
   transform: translateY(-2px);
   filter: brightness(1.05);
-  box-shadow: 0 10px 26px -8px rgb(79 208 122 / 0.65);
+  box-shadow: 0 10px 26px -8px rgb(57 195 107 / 0.55);
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-underline::after,
