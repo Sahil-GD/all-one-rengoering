@@ -46,40 +46,51 @@ export function Hero({
         className="absolute inset-0 -z-10"
         style={{
           background:
-            'linear-gradient(180deg, var(--color-blue-soft) 0%, var(--color-sky-soft) 30%, var(--color-surface) 70%)',
+            'linear-gradient(180deg, var(--color-blue-soft) 0%, var(--color-sky-soft) 32%, var(--color-surface) 72%)',
         }}
       />
       <div
         aria-hidden
         className="deco-orb deco-orb-sky deco-float -z-10"
-        style={{ top: '-8%', right: '2%', height: '28rem', width: '28rem', opacity: 0.7 }}
+        style={{ top: '-8%', right: '2%', height: '28rem', width: '28rem', opacity: 0.75 }}
       />
       <div
         aria-hidden
-        className="deco-orb deco-orb-teal deco-float -z-10"
+        className="deco-orb deco-orb-green deco-float -z-10"
         style={{ bottom: '4%', left: '-6%', height: '22rem', width: '22rem', animationDelay: '2s' }}
       />
 
       <Container className="relative z-10 grid items-center gap-14 py-16 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-24">
         <div>
-          <span className="enter enter-d1 inline-flex items-center gap-2 rounded-full border border-border bg-surface/80 px-3.5 py-1.5 text-sm font-medium shadow-raised backdrop-blur-sm">
+          <span className="enter enter-d1 inline-flex items-center gap-2 rounded-full border border-border bg-surface/85 px-3.5 py-1.5 text-sm font-medium shadow-raised backdrop-blur-sm">
             <span
               aria-hidden
-              className="pulse-dot h-1.5 w-1.5 rounded-full bg-blue"
+              className="pulse-dot h-1.5 w-1.5 rounded-full bg-accent-secondary"
             />
             {eyebrow}
           </span>
 
           <h1
-            className="enter enter-d2 relative mt-7 font-semibold uppercase text-accent"
+            className="relative mt-7 font-semibold uppercase"
             style={{
               fontSize: 'clamp(2.9rem, 1.6rem + 4.2vw, 5.4rem)',
               lineHeight: 1.0,
               letterSpacing: '-0.03em',
             }}
           >
-            <span className="block">{sloganLine1}</span>
-            <span className="text-gradient block">{sloganLine2}</span>
+            <span className="wipe-base">
+              <span className="block">{sloganLine1}</span>
+              <span className="block">{sloganLine2}</span>
+            </span>
+            <span aria-hidden className="wipe-over">
+              <span className="block">{sloganLine1}</span>
+              <span className="block text-teal-strong">{sloganLine2}</span>
+            </span>
+            <span aria-hidden className="wipe-glint">
+              <span className="block">{sloganLine1}</span>
+              <span className="block">{sloganLine2}</span>
+            </span>
+            <span aria-hidden className="wipe-sweep" />
           </h1>
 
           <p className="enter enter-d3 mt-6 max-w-md text-lg text-pretty text-ink-secondary">
@@ -103,7 +114,7 @@ export function Hero({
               >
                 <span
                   aria-hidden
-                  className="flex h-4 w-4 items-center justify-center rounded-full bg-blue-soft text-[0.6rem] font-bold text-blue"
+                  className="flex h-4 w-4 items-center justify-center rounded-full bg-green-soft text-[0.6rem] font-bold text-teal-strong"
                 >
                   ✓
                 </span>
@@ -128,7 +139,7 @@ export function Hero({
               image={image}
               priority
               sizes="(min-width: 1024px) 45vw, 100vw"
-              className="rounded-panel shadow-overlay ring-1 ring-white/40"
+              className="rounded-panel shadow-overlay ring-1 ring-white/50"
             />
           </div>
 
@@ -154,11 +165,11 @@ export function Hero({
               return (
                 <div
                   key={card.title}
-                  className={`enter enter-d5 flex gap-3 rounded-card border border-border/60 bg-surface/85 p-4 shadow-overlay backdrop-blur-md lg:max-w-[14.5rem] ${position ?? ''}`}
+                  className={`enter enter-d5 flex gap-3 rounded-card border border-border/60 bg-surface/90 p-4 shadow-overlay backdrop-blur-md lg:max-w-[14.5rem] ${position ?? ''}`}
                 >
                   <span
                     aria-hidden
-                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-soft text-blue"
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-green-soft text-teal-strong"
                   >
                     <Icon size={16} strokeWidth={1.5} />
                   </span>
